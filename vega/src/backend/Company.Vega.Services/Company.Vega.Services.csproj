@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Company.Common.DataAnnotations\Company.Common.DataAnnotations.csproj" />
+    <ProjectReference Include="..\Company.Common.Services\Company.Common.Services.csproj" />
+    <ProjectReference Include="..\Company.Vega.Domain\Company.Vega.Domain.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="6.2.2" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,142 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Vega",
+		"_postman_id": "77947453-dc46-0dfb-e200-ecd8a11662ce",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Vehicles",
+			"description": "",
+			"item": [
+				{
+					"name": "Get vehicle overviews by different filters",
+					"request": {
+						"url": {
+							"raw": "{{url}}/api/v1/vehicles/overviews?makers=&models=&contactName=&sortBy=0&pageSize=10&pageNumber=1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"vehicles",
+								"overviews"
+							],
+							"query": [
+								{
+									"key": "makers",
+									"value": "",
+									"equals": true,
+									"description": ""
+								},
+								{
+									"key": "models",
+									"value": "",
+									"equals": true,
+									"description": ""
+								},
+								{
+									"key": "contactName",
+									"value": "",
+									"equals": true,
+									"description": ""
+								},
+								{
+									"key": "sortBy",
+									"value": "0",
+									"equals": true,
+									"description": ""
+								},
+								{
+									"key": "pageSize",
+									"value": "10",
+									"equals": true,
+									"description": ""
+								},
+								{
+									"key": "pageNumber",
+									"value": "1",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get list of makers for vehicles filter",
+					"request": {
+						"url": "{{url}}/api/v1/makers/list",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get list of models for vehicles filter",
+					"request": {
+						"url": {
+							"raw": "{{url}}/api/v1/models/list?makers=1,2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"models",
+								"list"
+							],
+							"query": [
+								{
+									"key": "makers",
+									"value": "1,2",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get list of features for vehicle filter",
+					"request": {
+						"url": "{{url}}/api/v1/features/list",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get vehicles statistics by makers",
+					"request": {
+						"url": "{{url}}/api/v1/vehicles/statistics/bymakers",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

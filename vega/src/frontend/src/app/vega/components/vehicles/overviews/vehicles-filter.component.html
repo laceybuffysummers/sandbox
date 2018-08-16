@@ -1,0 +1,36 @@
+<mat-card *ngIf="request">
+  <mat-card-content>
+    <mat-form-field *ngIf="makersList">
+      <mat-select placeholder="Makers" multiple [(value)]="request.makers" 
+                  ngModel (ngModelChange)="onChangeMakers($event)">
+        <mat-option *ngFor="let item of makersList.items" [value]="item.value">
+          {{ item.text }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    
+    <mat-form-field *ngIf="modelsList">
+      <mat-select placeholder="Models" multiple [(value)]="request.models">
+        <mat-option *ngFor="let item of modelsList.items" [value]="item.value">
+          {{ item.text }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    
+    <mat-form-field *ngIf="featuresList">
+      <mat-select placeholder="Features" multiple [(value)]="request.features">
+        <mat-option *ngFor="let item of featuresList.items" [value]="item.value">
+          {{ item.text }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    
+    <mat-form-field>
+      <input matInput [(ngModel)]="request.contactName" placeholder="Owner">
+    </mat-form-field>            
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button color="primary" (click)="onFilter()">Filter</button>
+    <button mat-raised-button color="primary" (click)="onClearFilter()">Clear Filter</button>          
+  </mat-card-actions>
+</mat-card>

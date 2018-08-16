@@ -1,0 +1,23 @@
+@import "~bootstrap/dist/css/bootstrap.css";
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+.mat-header-cell.mat-sort-header-sorted {
+    color: black;
+ }
+
+ .mat-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .mat-form .mat-form-field {
+    width: 300px;
+  }
+
+  .mat-section {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    height: 60px;
+  }

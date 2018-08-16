@@ -1,0 +1,42 @@
+<h2>Vehicles</h2>
+<app-vehicles-filter [request]="request" (filter)="onFilter($event)"></app-vehicles-filter>
+<mat-card>
+  <mat-card-content>
+      <mat-table #table 
+      [dataSource]="dataSource" 
+      matSort 
+      (matSortChange)="onSortChange($event)">
+      <ng-container matColumnDef="maker">
+        <mat-header-cell *matHeaderCellDef mat-sort-header="maker"> Maker </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.maker}} </mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="model">
+        <mat-header-cell *matHeaderCellDef mat-sort-header="model"> Model </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.model}} </mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="contact">
+        <mat-header-cell *matHeaderCellDef mat-sort-header="contact"> Contact </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.contactName}} </mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="actions">
+        <mat-header-cell *matHeaderCellDef></mat-header-cell>
+        <mat-cell *matCellDef="let row">
+          <button mat-mini-fab color="primary" routerLink="/vehicles/{{row.vehicleId}}">Edit</button>
+        </mat-cell>
+      </ng-container>
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+
+    <mat-paginator *ngIf="overviews" 
+                  #paginator
+                  [pageSize]="pageSize"
+                  [pageSizeOptions]="[pageSize, pageSize * 2]"
+                  [length]="overviews.recordsCount"
+                  (page)="onPageChange($event)">
+    </mat-paginator>    
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button color="primary" routerLink="/vehicles/new">New Vehicle</button>
+  </mat-card-actions>
+</mat-card>

@@ -1,0 +1,88 @@
+<h2>Vehicle</h2>
+<mat-card *ngIf="model">
+    <mat-card-content>
+        <mat-tab-group dynamicHeight>
+            <mat-tab label="Main">
+            <form #f="ngForm" name="vehicleForm" class="mat-form">
+                    <mat-form-field *ngIf="makersList">
+                        <mat-select placeholder="Maker" 
+                                    name="maker"
+                                    #maker="ngModel"
+                                    [compareWith]="compareListItems"
+                                    [(ngModel)]="model.makerId" 
+                                    (ngModelChange)="onChangeMaker($event)"
+                                    required>
+                            <mat-option *ngFor="let item of makersList.items" [value]="item.value">
+                                {{ item.text }}
+                            </mat-option>
+                        </mat-select>
+                        <mat-error *ngIf="maker.invalid">Invalid maker.</mat-error>
+                    </mat-form-field>
+                    
+                    <mat-form-field *ngIf="modelsList">
+                        <mat-select placeholder="Model" 
+                                    name="model"
+                                    #vehicleModel="ngModel"
+                                    [compareWith]="compareListItems"
+                                    [(ngModel)]="model.modelId"
+                                    required>
+                            <mat-option *ngFor="let item of modelsList.items" [value]="item.value">
+                                {{ item.text }}
+                            </mat-option>
+                        </mat-select>
+                        <mat-error *ngIf="vehicleModel.invalid">Invalid model.</mat-error>
+                    </mat-form-field>
+        
+                    <mat-form-field *ngIf="ownersList">
+                        <mat-select placeholder="Owner" 
+                                    name="owner"
+                                    #owner="ngModel"
+                                    [compareWith]="compareListItems"
+                                    [(ngModel)]="model.ownerId"
+                                    required>
+                            <mat-option *ngFor="let item of ownersList.items" [value]="item.value">
+                                {{ item.text }}
+                            </mat-option>
+                        </mat-select>
+                        <mat-error *ngIf="owner.invalid">Invalid owner.</mat-error>
+                    </mat-form-field>    
+                    <mat-form-field>
+                        <textarea placeholder="Description"
+                                matInput
+                                matTextareaAutosize
+                                matAutosizeMaxRows="5"
+                                name="description"
+                                #description="ngModel"
+                                [(ngModel)]="model.description"
+                                maxlength="1024">                    
+                        </textarea>
+                        <mat-error *ngIf="description.invalid">Invalid description.</mat-error>
+                    </mat-form-field> 
+                    <section class="mat-section">
+                        <mat-checkbox placeholder="Registered"
+                                    name="isRegistered"
+                                    [(ngModel)]="model.isRegistered">Is Registered                    
+                        </mat-checkbox>            
+                    </section>           
+                </form>                                
+            </mat-tab>
+            <mat-tab label="Photos">
+                <app-vehicle-photos
+                    [photos]="model.photos"></app-vehicle-photos>
+                <app-upload 
+                    [uploadUrl]="uploadUrl"
+                    (uploaded)="onUploaded($event)"></app-upload>
+            </mat-tab>
+        </mat-tab-group>
+    </mat-card-content>
+    <mat-card-actions>
+        <button mat-raised-button color="primary" 
+                [disabled]="!f.valid" 
+                (click)="onSave()">Save</button>
+        <button mat-raised-button routerLink="/vehicles">Cancel</button>
+        <button mat-raised-button color="accent"
+                [disabled]="model.isNew"
+                (click)="onDelete()">Delete</button>
+    </mat-card-actions>
+</mat-card>
+      

@@ -1,0 +1,15 @@
+<table class="table table-striped">
+    <caption>Photos</caption>
+    <thead>
+    <tr>
+        <th>File Name</th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let p of photos">
+          <td><a routerLink="getDownloadUrl(p)">{{p.originalFileName}}</a></td>
+          <td></td>
+      </tr>
+    </tbody>
+</table>
