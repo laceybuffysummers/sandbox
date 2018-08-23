@@ -4,7 +4,7 @@
     using System.Collections.Generic;
     using System.Threading.Tasks;
 
-    using Company.Common.Dal.Core.Utils;
+    using Company.Common.Dal.Utils;
 
     using Microsoft.EntityFrameworkCore;
 

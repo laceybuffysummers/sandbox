@@ -1,4 +1,4 @@
-﻿namespace Company.Common.Dal.Core.Utils
+﻿namespace Company.Common.Dal.Utils
 {
     using Microsoft.EntityFrameworkCore;
 
