@@ -1,0 +1,6 @@
+aside {
+    width: 254px;
+    background-color:rgba(216, 216, 216, 0.19);
+    height: calc(100vh - 41px - 92px);
+    border-left: 1px solid #d8d8d8;
+}

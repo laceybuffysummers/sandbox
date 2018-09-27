@@ -1,0 +1,28 @@
+image: node:8
+
+stages:
+  - setup
+  - deploy
+
+services:
+
+variables:
+
+npm install:
+  stage: setup
+  script:
+    - npm i
+  artifacts:
+    paths:
+      - node_modules/
+
+deploy app:
+  stage: deploy
+  image : ruby:2.2
+  script:
+    - apt-get update -qy
+    - apt-get install -y ruby-dev rubygems
+    - gem install dpl
+    - dpl --provider=heroku --app=$HEROKU_APP_NAME --api-key=$HEROKU_API_KEY
+  only:
+    - master

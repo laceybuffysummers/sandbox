@@ -1,0 +1,30 @@
+.form-textarea {
+  width: 100%;
+  outline: none;
+  height: 66px;
+  overflow: auto;
+  border-radius: 3px;
+  background-color: #ffffff;
+  border: solid 1px rgba(155, 155, 155, 0.28);
+  color: #4a4a4a;
+  padding: 5px 10px;  
+  font-size: 12px;
+  resize: none;
+}
+
+.form-textarea.error-field {
+  border-color: #ff0000;
+}
+
+.fform-textarea::-webkit-input-placeholder {
+  color: rgba(74, 74, 74, 0.5);
+}
+.form-textarea::-moz-placeholder {
+  color: rgba(74, 74, 74, 0.5);
+}
+.form-textarea:-ms-input-placeholder {
+  color: rgba(74, 74, 74, 0.5);
+}
+.form-textarea:-moz-placeholder {
+  color: rgba(74, 74, 74, 0.5);
+}

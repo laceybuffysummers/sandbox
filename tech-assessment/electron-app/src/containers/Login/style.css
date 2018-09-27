@@ -1,0 +1,19 @@
+.login-wrapper {
+  margin: 50px auto;
+  border: 1px solid #999;
+  padding: 20px;
+  max-width: 500px;
+}
+.login-wrapper > div {
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+.login-wrapper > .button {
+  margin-top: 10px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.login-error {
+  color: #f00;
+  font-size: 12px;
+}

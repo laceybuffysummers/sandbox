@@ -1,0 +1,30 @@
+.field-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.field-wrapper .lable-wrapper {
+    font-size: 12px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 2.08;
+    letter-spacing: normal;
+    color: #4a4a4a;
+    width: 126px;
+    padding-left: 20px;
+}
+
+.field-wrapper  .value-wrapper {
+    font-size: 12px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 2.08;
+    letter-spacing: normal;
+    color: #4a4a4a;
+    width: calc(100% - 126px);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

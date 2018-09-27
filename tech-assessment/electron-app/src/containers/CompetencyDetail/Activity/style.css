@@ -1,0 +1,64 @@
+.activity-content-wrapper {
+    width: 100%;
+    padding: 15px 30px;
+}
+
+.activity-content-wrapper h1 {
+    font-size: 12px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #4a4a4a;
+    margin: 0;
+    padding: 0 0 15px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.activity-content-wrapper h1 button {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: 0;
+    background: transparent;
+    font-size: 12px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #0088f2;
+}
+
+.activity-content-wrapper .row-wrappers {
+    padding: 10px 40px;
+}
+
+.activity-content-wrapper .row-wrapper {
+    display: flex;
+    padding-bottom: 3px;
+}
+
+.activity-content-wrapper .row-wrapper .label {
+    font-size: 12px;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #4a4a4a;
+    font-weight: bold;
+    padding-right: 5px;
+
+}
+
+.activity-content-wrapper .row-wrapper .value {
+    font-size: 12px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #4a4a4a;
+}

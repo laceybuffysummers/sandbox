@@ -1,0 +1,46 @@
+.maturity-status-progres {
+  display: flex;
+  align-items: center;
+  line-height: initial;
+}
+.maturity-status-progres .progress {
+  width: 82px;
+  height: 5px;
+  background-color: #f3f3f3;
+}
+
+.maturity-status-progres .progress .bar {
+  background-color: #f0cb2f;
+  height: 5px;
+}
+.maturity-status-progres .progress .bar[progress='100'] {
+  background-color: #87c346;
+}
+
+.maturity-status-progres .label {
+  font-size: 12px;
+  width: 45px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 4.17;
+  letter-spacing: normal;
+  color: #4a4a4a;
+  padding-left: 15px;
+}
+
+.maturity-status-progres .label[progress='100'] {
+  color: #87c346;
+}
+
+.maturity-status-progres  .name {
+  word-wrap: break-word;
+  width: 80px;
+  padding-left: 5px;
+  font-size: 10px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  letter-spacing: normal;
+  color: #4a4a4a;
+ }

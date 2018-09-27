@@ -1,0 +1,52 @@
+{
+  "E12345" : {
+    "currentMaturity": "New to Skill",
+    "expectedMaturity": "Basic",
+    "levels": ["New to Skill", "Basic", "Intermediate", "Advanced"]
+  },
+  "E12346" : {
+    "currentMaturity": "Basic",
+    "expectedMaturity": "Basic",
+    "levels": ["New to Skill", "Basic", "Intermediate", "Advanced"]
+  },
+  "E12347" : {
+    "currentMaturity": "Advanced",
+    "expectedMaturity": "Advanced",
+    "levels": ["New to Skill", "Basic", "Intermediate", "Advanced"]
+  },
+  "E12348" : {
+    "currentMaturity": "New to Skill",
+    "expectedMaturity": "Basic",
+    "levels": ["New to Skill", "Basic", "Intermediate", "Advanced", "Advanced"]
+  },
+  "E12349" : {
+    "currentMaturity": "Basic",
+    "expectedMaturity": "Intermediate",
+    "levels": ["New to Skill", "Basic", "Intermediate", "Advanced"]
+  },
+  "E12350" : {
+    "currentMaturity": "Intermediate",
+    "expectedMaturity": "Intermediate",
+    "levels": ["New to Skill", "Basic", "Intermediate", "Advanced"]
+  },
+  "E12351" : {
+    "currentMaturity": "Intermediate",
+    "expectedMaturity": "Advanced",
+    "levels": ["New to Skill", "Basic", "Intermediate", "Advanced"]
+  },
+  "E12352" : {
+    "currentMaturity": "New to Skill",
+    "expectedMaturity": "Basic",
+    "levels": ["New to Skill", "Basic", "Intermediate", "Advanced"]
+  },
+  "E12353" : {
+    "currentMaturity": "Basic",
+    "expectedMaturity": "Basic",
+    "levels": ["New to Skill", "Basic", "Intermediate", "Advanced"]
+  },
+  "E12354" : {
+    "currentMaturity": "Intermediate",
+    "expectedMaturity": "Advanced",
+    "levels": ["New to Skill", "Basic", "Intermediate", "Advanced"]
+  }
+}

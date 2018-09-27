@@ -1,0 +1,1952 @@
+---
+swagger: "2.0"
+info:
+  description: Eaton Tech Assessment App - API
+  version: 0.0.1
+  title: Eaton Tech Assessment App - API
+  contact:
+    name: Thomas Kranitsas
+    email: kranitsasthomas@gmail.com
+paths:
+  /login:
+    post:
+      tags:
+      - Authentication
+      summary: Login
+      description: Login
+      parameters:
+      - in: body
+        name: credentials
+        required: true
+        schema:
+          $ref: '#/definitions/LoginCredentials'
+      responses:
+        200:
+          description: OK
+          schema:
+            $ref: '#/definitions/AccessToken'
+  /users:
+    get:
+      tags:
+      - User
+      summary: Search users
+      description: Only accessible by users with role `Leader`
+      parameters:
+      - name: query
+        in: query
+        description: Search query
+        required: false
+        type: string
+      - name: page
+        in: query
+        required: false
+        type: integer
+        default: 0
+      - name: pageSize
+        in: query
+        required: false
+        type: integer
+        default: 20
+      responses:
+        200:
+          description: OK
+          schema:
+            $ref: '#/definitions/PaginatedUsers'
+        400:
+          description: Bad Request
+        401:
+          description: Unauthorized
+        403:
+          description: Forbidden
+      security:
+      - bearer: []
+    post:
+      tags:
+      - User
+      summary: Create new user
+      description: Only accessible by users with role `Leader`
+      parameters:
+      - in: body
+        name: user
+        description: The new user
+        required: true
+        schema:
+          $ref: '#/definitions/User'
+      responses:
+        200:
+          description: OK
+          schema:
+            $ref: '#/definitions/User'
+        400:
+          description: Bad Request
+        401:
+          description: Unauthorized
+        403:
+          description: Forbidden
+        409:
+          description: Conflict
+      security:
+      - bearer: []
+  /users/{EID}:
+    get:
+      tags:
+      - User
+      summary: Get single User
+      description: Only accessible by users with role `Leader`
+      parameters:
+      - name: EID
+        in: path
+        required: true
+        type: string
+      responses:
+        200:
+          description: OK
+          schema:
+            $ref: '#/definitions/User'
+        400:
+          description: Bad Request
+        401:
+          description: Unauthorized
+        403:
+          description: Forbidden
+        404:
+          description: Not Found
+      security:
+      - bearer: []
+    put:
+      tags:
+      - User
+      summary: Update User
+      description: Only accessible by users with role `Leader`
+      parameters:
+      - name: EID
+        in: path
+        required: true
+        type: string
+      - in: body
+        name: user
+        required: true
+        schema:
+          $ref: '#/definitions/User'
+      responses:
+        200:
+          description: OK
+          schema:
+            $ref: '#/definitions/User'
+        400:
+          description: Bad Request
+        401:
+          description: Unauthorized
+        403:
+          description: Forbidden
+        404:
+          description: Not Found
+      security:
+      - bearer: []
+    delete:
+      tags:
+      - User
+      summary: Delete User
+      description: |
+        - Only accessible by users with role `Leader`
+        - Will work as `soft-delete` by default
+      parameters:
+      - name: hardDelete
+        in: query
+        description: Force hard delete
+        required: false
+        type: boolean
+      - name: EID
+        in: path
+        required: true
+        type: string
+      responses:
+        200:
+          description: OK
+        401:
+          description: Unauthorized
+        403:
+          description: Forbidden
+        404:
+          description: Not Found
+      security:
+      - bearer: []
+  /employees:
+    get:
+      tags:
+      - Employee
+      summary: Search employees
+      description: Only accessible by users with role `Leader`
+      parameters:
+      - name: query
+        in: query
+        description: Search query. It will search in EID and name.
+        required: false
+        type: string
+      - name: page
+        in: query
+        required: false
+        type: integer
+        default: 0
+      - name: pageSize
+        in: query
+        required: false
+        type: integer
+        default: 20
+      responses:
+        200:
+          description: OK
+          schema:
+            $ref: '#/definitions/PaginatedEmployees'
+        400:
+          description: Bad Request
+        401:
+          description: Unauthorized
+        403:
+          description: Forbidden
+      security:
+      - bearer: []
+    post:
+      tags:
+      - Employee
+      summary: Create new employee
+      description: Only accessible by users with role `Leader`
+      parameters:
+      - in: body
+        name: employee
+        description: The new employee
+        required: true
+        schema:
+          $ref: '#/definitions/Employee'
+      responses:
+        200:
+          description: OK
+          schema:
+            $ref: '#/definitions/Employee'
+        400:
+          description: Bad Request
+        401:
+          description: Unauthorized
+        403:
+          description: Forbidden
+        409:
+          description: Conflict
+      security:
+      - bearer: []
+  /employees/{EID}:
+    get:
+      tags:
+      - Employee
+      summary: Get single Employee
+      description: Only accessible by users with role `Leader`
+      parameters:
+      - name: EID
+        in: path
+        required: true
+        type: string
+      responses:
+        200:
+          description: OK
+          schema:
+            $ref: '#/definitions/Employee'
+        400:
+          description: Bad Request
+        401:
+          description: Unauthorized
+        403:
+          description: Forbidden
+        404:
+          description: Not Found
+      security:
+      - bearer: []
+    put:
+      tags:
+      - Employee
+      summary: Update Employee
+      description: Only accessible by users with role `Leader`
+      parameters:
+      - name: EID
+        in: path
+        required: true
+        type: string
+      - in: body
+        name: user
+        required: true
+        schema:
+          $ref: '#/definitions/Employee'
+      responses:
+        200:
+          description: OK
+          schema:
+            $ref: '#/definitions/Employee'
+        400:
+          description: Bad Request
+        401:
+          description: Unauthorized
+        403:
+          description: Forbidden
+        404:
+          description: Not Found
+      security:
+      - bearer: []
+    delete:
+      tags:
+      - Employee
+      summary: Delete Employee
+      description: Only accessible by users with role `Leader`
+      parameters:
+      - name: EID
+        in: path
+        required: true
+        type: string
+      responses:
+        200:
+          description: OK
+        401:
+          description: Unauthorized
+        403:
+          description: Forbidden
+        404:
+          description: Not Found
+      security:
+      - bearer: []
+  /lookup/employees/countries:
+    get:
+      tags:
+      - Employee
+      summary: Get distinct employee countries
+      description: Accessible by all users
+      responses:
+        200:
+          description: OK
+          schema:
+            type: array
+            items:
+              type: string
+        401:
+          description: Unauthorized
+      security:
+      - bearer: []
+  /lookup/employees/divisions:
+    get:
+      tags:
+      - Employee
+      summary: Get distinct employee divisions
+      description: Accessible by all users
+      responses:
+        200:
+          description: OK
+          schema:
+            type: array
+            items:
+              type: string
+        401:
+          description: Unauthorized
+      security:
+      - bearer: []
+  /lookup/employees/subGroups:
+    get:
+      tags:
+      - Employee
+      summary: Get distinct employee sub groups
+      description: Accessible by all users
+      responses:
+        200:
+          description: OK
+          schema:
+            type: array
+            items:
+              type: string
+        401:
+          description: Unauthorized
+      security:
+      - bearer: []
+  /lookup/employees/profiles:
+    get:
+      tags:
+      - Employee
+      summary: Get distinct employee profiles
+      description: Accessible by all users
+      responses:
+        200:
+          description: OK
+          schema:
+            type: array
+            items:
+              type: string
+        401:
+          description: Unauthorized
+      security:
+      - bearer: []
+  /competencies:
+    get:
+      tags:
+      - Competency
+      summary: Search Competencies
+      description: Leader can see only his own competencies. Director and Manager can see all.
+      parameters:
+      - name: query
+        in: query
+        description: Search query
+        required: false
+        type: string
+      - name: page
+        in: query
+        required: false
+        type: integer
+        default: 0
+      - name: pageSize
+        in: query
+        required: false
+        type: integer
+        default: 20
+      responses:
+        200:
+          description: OK
+          schema:
+            $ref: '#/definitions/PaginatedCompetencies'
+        400:
+          description: Bad Request
+        401:
+          description: Unauthorized
+      security:
+      - bearer: []
+    post:
+      tags:
+      - Competency
+      summary: Create new Competency
+      description: Only accessible by users with role `Leader`
+      parameters:
+      - in: body
+        name: competency
+        description: The new Competency
+        required: true
+        schema:
+          $ref: '#/definitions/Competency'
+      responses:
+        200:
+          description: OK
+          schema:
+            $ref: '#/definitions/Competency'
+        400:
+          description: Bad Request
+        401:
+          description: Unauthorized
+        403:
+          description: Forbidden
+        409:
+          description: Conflict
+      security:
+      - bearer: []
+  /competencies/{id}:
+    get:
+      tags:
+      - Competency
+      summary: Get single Competency
+      description: Only accessible by users with role `Leader`
+      parameters:
+      - name: id
+        in: path
+        required: true
+        type: string
+      responses:
+        200:
+          description: OK
+          schema:
+            $ref: '#/definitions/Competency'
+        400:
+          description: Bad Request
+        401:
+          description: Unauthorized
+        403:
+          description: Forbidden
+        404:
+          description: Not Found
+      security:
+      - bearer: []
+    put:
+      tags:
+      - Competency
+      summary: Update Competency
+      description: Only accessible by users with role `Leader`
+      parameters:
+      - name: id
+        in: path
+        required: true
+        type: string
+      - in: body
+        name: competency
+        required: true
+        schema:
+          $ref: '#/definitions/Competency'
+      responses:
+        200:
+          description: OK
+          schema:
+            $ref: '#/definitions/Employee'
+        400:
+          description: Bad Request
+        401:
+          description: Unauthorized
+        403:
+          description: Forbidden
+        404:
+          description: Not Found
+      security:
+      - bearer: []
+    delete:
+      tags:
+      - Competency
+      summary: Delete Competency
+      description: Only accessible by users with role `Leader`
+      parameters:
+      - name: id
+        in: path
+        required: true
+        type: string
+      responses:
+        200:
+          description: OK
+        401:
+          description: Unauthorized
+        403:
+          description: Forbidden
+        404:
+          description: Not Found
+      security:
+      - bearer: []
+  /competencies/{compId}/sub-competencies:
+    get:
+      tags:
+      - SubCompetencies
+      summary: Search SubCompetencies
+      description: Leader can see only his own competencies. Director and Manager can see all.
+      parameters:
+      - name: compId
+        in: path
+        required: true
+        type: integer
+      - name: query
+        in: query
+        description: Search query
+        required: false
+        type: string
+      - name: page
+        in: query
+        required: false
+        type: integer
+        default: 0
+      - name: pageSize
+        in: query
+        required: false
+        type: integer
+        default: 20
+      responses:
+        200:
+          description: OK
+          schema:
+            $ref: '#/definitions/PaginatedSubCompetencies'
+        400:
+          description: Bad Request
+        401:
+          description: Unauthorized
+        403:
+          description: Forbidden
+      security:
+      - bearer: []
+    post:
+      tags:
+      - SubCompetencies
+      summary: Create new SubCompetencies
+      description: Only accessible by users with role `Leader`
+      parameters:
+      - name: compId
+        in: path
+        required: true
+        type: integer
+      - in: body
+        name: subCompetency
+        description: The new SubCompetency
+        required: true
+        schema:
+          $ref: '#/definitions/SubCompetency'
+      responses:
+        200:
+          description: OK
+          schema:
+            $ref: '#/definitions/SubCompetency'
+        400:
+          description: Bad Request
+        401:
+          description: Unauthorized
+        403:
+          description: Forbidden
+        409:
+          description: Conflict
+      security:
+      - bearer: []
+  /competencies/{compId}/sub-competencies/{subCompId}:
+    get:
+      tags:
+      - SubCompetencies
+      summary: Get single SubCompetency
+      description: Only accessible by users with role `Leader`
+      parameters:
+      - name: compId
+        in: path
+        required: true
+        type: integer
+      - name: subCompId
+        in: path
+        required: true
+        type: integer
+      responses:
+        200:
+          description: OK
+          schema:
+            $ref: '#/definitions/SubCompetency'
+        400:
+          description: Bad Request
+        401:
+          description: Unauthorized
+        403:
+          description: Forbidden
+        404:
+          description: Not Found
+      security:
+      - bearer: []
+    put:
+      tags:
+      - SubCompetencies
+      summary: Update SubCompetency
+      description: Only accessible by users with role `Leader`
+      parameters:
+      - name: compId
+        in: path
+        required: true
+        type: integer
+      - name: subCompId
+        in: path
+        required: true
+        type: integer
+      - in: body
+        name: subCompetency
+        required: true
+        schema:
+          $ref: '#/definitions/SubCompetency'
+      responses:
+        200:
+          description: OK
+          schema:
+            $ref: '#/definitions/SubCompetency'
+        400:
+          description: Bad Request
+        401:
+          description: Unauthorized
+        403:
+          description: Forbidden
+        404:
+          description: Not Found
+      security:
+      - bearer: []
+    delete:
+      tags:
+      - SubCompetencies
+      summary: Delete SubCompetency
+      description: Only accessible by users with role `Leader`
+      parameters:
+      - name: compId
+        in: path
+        required: true
+        type: integer
+      - name: subCompId
+        in: path
+        required: true
+        type: integer
+      responses:
+        200:
+          description: OK
+        401:
+          description: Unauthorized
+        403:
+          description: Forbidden
+        404:
+          description: Not Found
+      security:
+      - bearer: []
+  /competencies/{compId}/sub-competencies/{subCompId}/levels:
+    get:
+      tags:
+      - Levels
+      summary: Search Levels
+      description: Only accessible by users with role `Leader`
+      parameters:
+      - name: compId
+        in: path
+        required: true
+        type: integer
+      - name: subCompId
+        in: path
+        required: true
+        type: integer
+      - name: query
+        in: query
+        description: Search query
+        required: false
+        type: string
+      - name: page
+        in: query
+        required: false
+        type: integer
+        default: 0
+      - name: pageSize
+        in: query
+        required: false
+        type: integer
+        default: 20
+      responses:
+        200:
+          description: OK
+          schema:
+            $ref: '#/definitions/PaginatedSubCompetencyLevels'
+        400:
+          description: Bad Request
+        401:
+          description: Unauthorized
+        403:
+          description: Forbidden
+      security:
+      - bearer: []
+    post:
+      tags:
+      - Levels
+      summary: Create new Level
+      description: Only accessible by users with role `Leader`
+      parameters:
+      - name: compId
+        in: path
+        required: true
+        type: integer
+      - name: subCompId
+        in: path
+        required: true
+        type: integer
+      - in: body
+        name: level
+        description: The new SubCompetencyLevel
+        required: true
+        schema:
+          $ref: '#/definitions/SubCompetencyLevel'
+      responses:
+        200:
+          description: OK
+          schema:
+            $ref: '#/definitions/SubCompetencyLevel'
+        400:
+          description: Bad Request
+        401:
+          description: Unauthorized
+        403:
+          description: Forbidden
+        409:
+          description: Conflict
+      security:
+      - bearer: []
+  /competencies/{compId}/sub-competencies/{subCompId}/levels/{levelId}:
+    get:
+      tags:
+      - Levels
+      summary: Get single Level
+      description: Only accessible by users with role `Leader`
+      parameters:
+      - name: compId
+        in: path
+        required: true
+        type: integer
+      - name: subCompId
+        in: path
+        required: true
+        type: integer
+      - name: levelId
+        in: path
+        required: true
+        type: integer
+      responses:
+        200:
+          description: OK
+          schema:
+            $ref: '#/definitions/SubCompetencyLevel'
+        400:
+          description: Bad Request
+        401:
+          description: Unauthorized
+        403:
+          description: Forbidden
+        404:
+          description: Not Found
+      security:
+      - bearer: []
+    put:
+      tags:
+      - Levels
+      summary: Update Level
+      description: Only accessible by users with role `Leader`
+      parameters:
+      - name: compId
+        in: path
+        required: true
+        type: integer
+      - name: subCompId
+        in: path
+        required: true
+        type: integer
+      - name: levelId
+        in: path
+        required: true
+        type: integer
+      - in: body
+        name: level
+        required: true
+        schema:
+          $ref: '#/definitions/SubCompetencyLevel'
+      responses:
+        200:
+          description: OK
+          schema:
+            $ref: '#/definitions/SubCompetencyLevel'
+        400:
+          description: Bad Request
+        401:
+          description: Unauthorized
+        403:
+          description: Forbidden
+        404:
+          description: Not Found
+      security:
+      - bearer: []
+    delete:
+      tags:
+      - Levels
+      summary: Delete Level
+      description: Only accessible by users with role `Leader`
+      parameters:
+      - name: compId
+        in: path
+        required: true
+        type: integer
+      - name: subCompId
+        in: path
+        required: true
+        type: integer
+      - name: levelId
+        in: path
+        required: true
+        type: integer
+      responses:
+        200:
+          description: OK
+        401:
+          description: Unauthorized
+        403:
+          description: Forbidden
+        404:
+          description: Not Found
+      security:
+      - bearer: []
+  /competencies/{compId}/sub-competencies/{subCompId}/levels/{levelId}/activities:
+    get:
+      tags:
+      - Activities
+      summary: Search Activities
+      description: Only accessible by users with role `Leader`
+      parameters:
+      - name: compId
+        in: path
+        required: true
+        type: integer
+      - name: subCompId
+        in: path
+        required: true
+        type: integer
+      - name: levelId
+        in: path
+        required: true
+        type: integer
+      - name: query
+        in: query
+        description: Search query
+        required: false
+        type: string
+      - name: page
+        in: query
+        required: false
+        type: integer
+        default: 0
+      - name: pageSize
+        in: query
+        required: false
+        type: integer
+        default: 20
+      responses:
+        200:
+          description: OK
+          schema:
+            $ref: '#/definitions/PaginatedActivities'
+        400:
+          description: Bad Request
+        401:
+          description: Unauthorized
+        403:
+          description: Forbidden
+      security:
+      - bearer: []
+    post:
+      tags:
+      - Activities
+      summary: Create new Activity
+      description: Only accessible by users with role `Leader`
+      parameters:
+      - name: compId
+        in: path
+        required: true
+        type: integer
+      - name: subCompId
+        in: path
+        required: true
+        type: integer
+      - name: levelId
+        in: path
+        required: true
+        type: integer
+      - in: body
+        name: activity
+        description: The new Activity
+        required: true
+        schema:
+          $ref: '#/definitions/Activity'
+      responses:
+        200:
+          description: OK
+          schema:
+            $ref: '#/definitions/Activity'
+        400:
+          description: Bad Request
+        401:
+          description: Unauthorized
+        403:
+          description: Forbidden
+        409:
+          description: Conflict
+      security:
+      - bearer: []
+  /competencies/{compId}/sub-competencies/{subCompId}/levels/{levelId}/activities/{activityId}:
+    get:
+      tags:
+      - Activities
+      summary: Get single Activity
+      description: Only accessible by users with role `Leader`
+      parameters:
+      - name: compId
+        in: path
+        required: true
+        type: integer
+      - name: subCompId
+        in: path
+        required: true
+        type: integer
+      - name: levelId
+        in: path
+        required: true
+        type: integer
+      - name: activityId
+        in: path
+        required: true
+        type: integer
+      responses:
+        200:
+          description: OK
+          schema:
+            $ref: '#/definitions/Activity'
+        400:
+          description: Bad Request
+        401:
+          description: Unauthorized
+        403:
+          description: Forbidden
+        404:
+          description: Not Found
+      security:
+      - bearer: []
+    put:
+      tags:
+      - Activities
+      summary: Update Activity
+      description: Only accessible by users with role `Leader`
+      parameters:
+      - name: compId
+        in: path
+        required: true
+        type: integer
+      - name: subCompId
+        in: path
+        required: true
+        type: integer
+      - name: levelId
+        in: path
+        required: true
+        type: integer
+      - name: activityId
+        in: path
+        required: true
+        type: integer
+      - in: body
+        name: activity
+        required: true
+        schema:
+          $ref: '#/definitions/Activity'
+      responses:
+        200:
+          description: OK
+          schema:
+            $ref: '#/definitions/Activity'
+        400:
+          description: Bad Request
+        401:
+          description: Unauthorized
+        403:
+          description: Forbidden
+        404:
+          description: Not Found
+      security:
+      - bearer: []
+    delete:
+      tags:
+      - Activities
+      summary: Delete Activity
+      description: Only accessible by users with role `Leader`
+      parameters:
+      - name: compId
+        in: path
+        required: true
+        type: integer
+      - name: subCompId
+        in: path
+        required: true
+        type: integer
+      - name: levelId
+        in: path
+        required: true
+        type: integer
+      - name: activityId
+        in: path
+        required: true
+        type: integer
+      responses:
+        200:
+          description: OK
+        401:
+          description: Unauthorized
+        403:
+          description: Forbidden
+        404:
+          description: Not Found
+      security:
+      - bearer: []
+  /employees/{EID}/sub-competencies:
+    post:
+      tags:
+      - EmployeeSubCompetency
+      summary: Create new connection between Employee and SubCompetency
+      description: Only accessible by users with role `Leader`
+      parameters:
+      - name: EID
+        in: path
+        required: true
+        type: integer
+      - in: body
+        name: employeeSubCompetencyConnection
+        description: The connection object
+        required: true
+        schema:
+          $ref: '#/definitions/EmployeeSubCompetencyConnection'
+      responses:
+        201:
+          description: OK
+          schema:
+            $ref: '#/definitions/EmployeeSubCompetencyConnection'
+        400:
+          description: Bad Request
+        401:
+          description: Unauthorized
+        403:
+          description: Forbidden
+        409:
+          description: Conflict
+      security:
+      - bearer: []
+  /competencies/{compId}/sub-competencies/{subCompId}/employees:
+    get:
+      tags:
+      - EmployeeSubCompetency
+      summary: Get all the employees belonging to a particular Competency/SubCompetency Group
+      description: Only accessible by users with role `Leader`
+      parameters:
+      - name: compId
+        in: path
+        required: true
+        type: integer
+      - name: subCompId
+        in: path
+        required: true
+        type: integer
+      responses:
+        200:
+          description: OK
+          schema:
+            $ref: '#/definitions/EmployeeSubCompetencyConnection'
+        400:
+          description: Bad Request
+        401:
+          description: Unauthorized
+        403:
+          description: Forbidden
+        404:
+          description: Not Found
+        409:
+          description: Conflict
+      security:
+      - bearer: []
+  /employees/{EID}/sub-competencies/{subCompId}:
+    put:
+      tags:
+      - EmployeeSubCompetency
+      summary: Update connection between Employee and SubCompetency
+      description: Only accessible by users with role `Leader`
+      parameters:
+      - name: EID
+        in: path
+        required: true
+        type: integer
+      - name: subCompId
+        in: path
+        required: true
+        type: integer
+      - in: body
+        name: employeeSubCompetencyConnection
+        description: The connection object
+        required: true
+        schema:
+          $ref: '#/definitions/EmployeeSubCompetencyConnection'
+      responses:
+        200:
+          description: OK
+          schema:
+            $ref: '#/definitions/EmployeeSubCompetencyConnection'
+        400:
+          description: Bad Request
+        401:
+          description: Unauthorized
+        403:
+          description: Forbidden
+        404:
+          description: Not Found
+        409:
+          description: Conflict
+      security:
+      - bearer: []
+    delete:
+      tags:
+      - EmployeeSubCompetency
+      summary: Delete connection between Employee and SubCompetency
+      description: Only accessible by users with role `Leader`
+      parameters:
+      - name: EID
+        in: path
+        required: true
+        type: integer
+      - name: subCompId
+        in: path
+        required: true
+        type: integer
+      responses:
+        200:
+          description: OK
+          schema:
+            $ref: '#/definitions/Employee'
+        400:
+          description: Bad Request
+        401:
+          description: Unauthorized
+        403:
+          description: Forbidden
+        404:
+          description: Not Found
+      security:
+      - bearer: []
+  /employees-sub-competencies:
+    post:
+      tags:
+      - EmployeeSubCompetency
+      summary: Import Employee-SubCompetency connections from CSV file
+      description: Only accessible by users with role `Leader`
+      consumes:
+      - multipart/form-data
+      parameters:
+      - name: file
+        in: formData
+        description: The csv file contains following columns - competencyId, subCompetencyId, currentLevel, employeeEID, currentMaturity, expectedMaturity
+        required: false
+        type: file
+        collectionFormat: csv
+      responses:
+        200:
+          description: the list of created/updated connections
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/EmployeeSubCompetencyConnection'
+        400:
+          description: Bad Request
+        401:
+          description: Unauthorized
+        403:
+          description: Forbidden
+        409:
+          description: Conflict
+      security:
+      - bearer: []
+  /employees/{EID}/levels:
+    post:
+      tags:
+      - CompletedLevels
+      summary: Mark all Activities within a SubCompetencyLevel as completed
+      description: Only accessible by users with role `Leader`
+      parameters:
+      - name: EID
+        in: path
+        required: true
+        type: string
+      - in: body
+        name: level
+        required: true
+        schema:
+          $ref: '#/definitions/CompletedLevel'
+      responses:
+        201:
+          description: OK
+        400:
+          description: Bad Request
+        401:
+          description: Unauthorized
+        403:
+          description: Forbidden
+        404:
+          description: Not Found
+      security:
+      - bearer: []
+  /employees/{EID}/activities:
+    get:
+      tags:
+      - CompletedActivities
+      summary: Search Employee Activities
+      description: Only accessible by users with role `Leader`
+      parameters:
+      - name: EID
+        in: path
+        required: true
+        type: string
+      - name: query
+        in: query
+        description: Search query
+        required: false
+        type: string
+      - name: page
+        in: query
+        required: false
+        type: integer
+        default: 0
+      - name: pageSize
+        in: query
+        required: false
+        type: integer
+        default: 20
+      responses:
+        200:
+          description: OK
+          schema:
+            $ref: '#/definitions/PaginatedActivities'
+        401:
+          description: Unauthorized
+        403:
+          description: Forbidden
+        404:
+          description: Not Found
+      security:
+      - bearer: []
+    post:
+      tags:
+      - CompletedActivities
+      summary: Create new Employee Activity as incomplete
+      description: Only accessible by users with role `Leader`
+      parameters:
+      - name: EID
+        in: path
+        required: true
+        type: string
+      - in: body
+        name: activity
+        required: true
+        schema:
+          $ref: '#/definitions/CompletedActivity'
+      responses:
+        201:
+          description: OK
+        400:
+          description: Bad Request
+        401:
+          description: Unauthorized
+        403:
+          description: Forbidden
+        404:
+          description: Not Found
+      security:
+      - bearer: []
+    put:
+      tags:
+      - CompletedActivities
+      summary: Update Employee Activity as complete
+      description: Only accessible by users with role `Leader`
+      parameters:
+      - name: EID
+        in: path
+        required: true
+        type: string
+      - in: body
+        name: activity
+        required: true
+        schema:
+          $ref: '#/definitions/CompletedActivity'
+      responses:
+        201:
+          description: OK
+        400:
+          description: Bad Request
+        401:
+          description: Unauthorized
+        403:
+          description: Forbidden
+        404:
+          description: Not Found
+      security:
+      - bearer: []
+  /employees/{EID}/activities/{activityId}:
+    delete:
+      tags:
+      - CompletedActivities
+      summary: Remove completed Activity from Employee
+      description: Only accessible by users with role `Leader`
+      parameters:
+      - name: EID
+        in: path
+        required: true
+        type: string
+      - name: activityId
+        in: path
+        required: true
+        type: string
+      responses:
+        200:
+          description: OK
+        400:
+          description: Bad Request
+        401:
+          description: Unauthorized
+        403:
+          description: Forbidden
+        404:
+          description: Not Found
+      security:
+      - bearer: []
+  /statistics:
+    get:
+      tags:
+      - Statistics
+      summary: Get statistics
+      description: Accessible by all users
+      parameters:
+      - name: competencyId
+        in: query
+        required: true
+        type: string
+      - name: subCompetencyId
+        in: query
+        required: true
+        type: string
+      - name: country
+        in: query
+        required: false
+        type: string
+      - name: division
+        in: query
+        required: false
+        type: string
+      - name: subGroup
+        in: query
+        required: false
+        type: string
+      - name: profile
+        in: query
+        required: false
+        type: string
+      responses:
+        200:
+          description: OK
+          schema:
+            $ref: '#/definitions/Statistics'
+        400:
+          description: Bad Request
+        401:
+          description: Unauthorized
+        403:
+          description: Forbidden
+        404:
+          description: Not Found
+  /logs:
+    get:
+      tags:
+      - Logs
+      summary: Search logs
+      description: Only accessible by users with role `Leader`. Results are sorted by `dateTime desc`
+      parameters:
+      - name: query
+        in: query
+        description: Search query. It will search in objectId, objectName, objectType, and operation.
+        required: false
+        type: string
+      - name: page
+        in: query
+        required: false
+        type: integer
+        default: 0
+      - name: pageSize
+        in: query
+        required: false
+        type: integer
+        default: 20
+      responses:
+        200:
+          description: OK
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/PaginatedLogInformation'
+        401:
+          description: Unauthorized
+        403:
+          description: Forbidden
+        404:
+          description: Not Found
+      security:
+      - bearer: []
+securityDefinitions:
+  bearer:
+    type: apiKey
+    name: Authorization
+    in: header
+definitions:
+  LoginCredentials:
+    type: object
+    required:
+    - password
+    - username
+    properties:
+      username:
+        type: string
+      password:
+        type: string
+    example:
+      password: password
+      username: username
+  AccessToken:
+    type: object
+    required:
+    - token
+    properties:
+      token:
+        type: string
+    example:
+      token: token
+  AuditFields:
+    type: object
+    properties:
+      createdBy:
+        type: string
+        description: should not be included in the requests, value should be set by back-end
+        readOnly: true
+      updatedBy:
+        type: string
+        description: should not be included in the requests, value should be set by back-end
+      createdAt:
+        type: string
+        format: date
+        description: should not be included in the requests, value should be set by back-end
+        readOnly: true
+      updatedAt:
+        type: string
+        format: date
+        description: should not be included in the requests, value should be set by back-end
+  User:
+    type: object
+    required:
+    - EID
+    - name
+    - password
+    - role
+    - username
+    properties:
+      EID:
+        type: string
+      name:
+        type: string
+      role:
+        type: string
+      directorEID:
+        type: string
+      username:
+        type: string
+      password:
+        type: string
+    example:
+      EID: EID
+      password: password
+      role: role
+      directorEID: directorEID
+      name: name
+      username: username
+  PaginatedUsers:
+    type: object
+    properties:
+      total:
+        type: integer
+      page:
+        type: integer
+      pageSize:
+        type: integer
+      items:
+        type: array
+        items:
+          $ref: '#/definitions/User'
+    example:
+      total: 0
+      pageSize: 1
+      page: 6
+      items:
+      - EID: EID
+        password: password
+        role: role
+        directorEID: directorEID
+        name: name
+        username: username
+      - EID: EID
+        password: password
+        role: role
+        directorEID: directorEID
+        name: name
+        username: username
+  Employee:
+    type: object
+    required:
+    - EID
+    - country
+    - division
+    - managerEID
+    - name
+    - profile
+    - subGroup
+    properties:
+      EID:
+        type: string
+      name:
+        type: string
+      country:
+        type: string
+      division:
+        type: string
+      subGroup:
+        type: string
+      profile:
+        type: string
+      managerEID:
+        type: string
+    example:
+      division: division
+      EID: EID
+      country: country
+      subGroup: subGroup
+      profile: profile
+      name: name
+      managerEID: managerEID
+  PaginatedEmployees:
+    type: object
+    properties:
+      total:
+        type: integer
+      page:
+        type: integer
+      pageSize:
+        type: integer
+      items:
+        type: array
+        items:
+          $ref: '#/definitions/Employee'
+    example:
+      total: 0
+      pageSize: 1
+      page: 6
+      items:
+      - division: division
+        EID: EID
+        country: country
+        subGroup: subGroup
+        profile: profile
+        name: name
+        managerEID: managerEID
+      - division: division
+        EID: EID
+        country: country
+        subGroup: subGroup
+        profile: profile
+        name: name
+        managerEID: managerEID
+  Competency:
+    type: object
+    required:
+    - description
+    - id
+    - name
+    properties:
+      id:
+        type: integer
+      name:
+        type: string
+      description:
+        type: string
+    example:
+      name: name
+      description: description
+      id: 5
+  PaginatedCompetencies:
+    type: object
+    properties:
+      total:
+        type: integer
+      page:
+        type: integer
+      pageSize:
+        type: integer
+      items:
+        type: array
+        items:
+          $ref: '#/definitions/Competency'
+    example:
+      total: 0
+      pageSize: 1
+      page: 6
+      items:
+      - name: name
+        description: description
+        id: 5
+      - name: name
+        description: description
+        id: 5
+  SubCompetency:
+    type: object
+    required:
+    - description
+    - id
+    - name
+    properties:
+      id:
+        type: integer
+      name:
+        type: string
+      description:
+        type: string
+    example:
+      name: name
+      description: description
+      id: 5
+  EmployeeSubCompetencyConnection:
+    type: object
+    required:
+    - competencyId
+    - currentMaturity
+    - expectedMaturity
+    - id
+    - subCompetencyId
+    properties:
+      id:
+        type: integer
+      competencyId:
+        type: integer
+      subCompetencyId:
+        type: integer
+      currentMaturity:
+        type: integer
+      expectedMaturity:
+        type: integer
+    example:
+      expectedMaturity: 5
+      competencyId: 6
+      id: 0
+      subCompetencyId: 1
+      currentMaturity: 5
+  PaginatedSubCompetencies:
+    type: object
+    properties:
+      total:
+        type: integer
+      page:
+        type: integer
+      pageSize:
+        type: integer
+      items:
+        type: array
+        items:
+          $ref: '#/definitions/SubCompetency'
+    example:
+      total: 0
+      pageSize: 1
+      page: 6
+      items:
+      - name: name
+        description: description
+        id: 5
+      - name: name
+        description: description
+        id: 5
+  SubCompetencyLevel:
+    type: object
+    required:
+    - description
+    - id
+    - level
+    - name
+    properties:
+      id:
+        type: integer
+      level:
+        type: integer
+      name:
+        type: string
+      description:
+        type: string
+    example:
+      level: 5
+      name: name
+      description: description
+      id: 5
+  PaginatedSubCompetencyLevels:
+    type: object
+    properties:
+      total:
+        type: integer
+      page:
+        type: integer
+      pageSize:
+        type: integer
+      items:
+        type: array
+        items:
+          $ref: '#/definitions/SubCompetencyLevel'
+    example:
+      total: 0
+      pageSize: 1
+      page: 6
+      items:
+      - level: 5
+        name: name
+        description: description
+        id: 5
+      - level: 5
+        name: name
+        description: description
+        id: 5
+  Activity:
+    type: object
+    required:
+    - description
+    - id
+    - lifeExperience
+    - name
+    - skillAcquired
+    - subCompetencyLevelId
+    properties:
+      id:
+        type: integer
+      name:
+        type: string
+      description:
+        type: string
+      skillAcquired:
+        type: string
+      lifeExperience:
+        type: string
+      subCompetencyLevelId:
+        type: integer
+        description: should not be included in the request bodies
+    example:
+      skillAcquired: skillAcquired
+      subCompetencyLevelId: 5
+      name: name
+      description: description
+      id: 5
+      lifeExperience: lifeExperience
+  PaginatedActivities:
+    type: object
+    properties:
+      total:
+        type: integer
+      page:
+        type: integer
+      pageSize:
+        type: integer
+      items:
+        type: array
+        items:
+          $ref: '#/definitions/Activity'
+    example:
+      total: 0
+      pageSize: 1
+      page: 6
+      items:
+      - skillAcquired: skillAcquired
+        subCompetencyLevelId: 5
+        name: name
+        description: description
+        id: 5
+        lifeExperience: lifeExperience
+      - skillAcquired: skillAcquired
+        subCompetencyLevelId: 5
+        name: name
+        description: description
+        id: 5
+        lifeExperience: lifeExperience
+  CompletedEntry:
+    type: object
+    required:
+    - currentCount
+    - expectedCount
+    - maturityLevel
+    properties:
+      maturityLevel:
+        type: string
+        description: The maturity level (eg. 'New To Skill')
+      currentCount:
+        type: integer
+      expectedCount:
+        type: integer
+    example:
+      currentCount: 0
+      maturityLevel: maturityLevel
+      expectedCount: 6
+  CompletedLevel:
+    type: object
+    required:
+    - levelId
+    properties:
+      levelId:
+        type: string
+    example:
+      levelId: levelId
+  CompletedActivity:
+    type: object
+    required:
+    - activityId
+    properties:
+      activityId:
+        type: string
+    example:
+      activityId: activityId
+  Statistics:
+    type: object
+    required:
+    - data
+    properties:
+      data:
+        type: array
+        items:
+          $ref: '#/definitions/CompletedEntry'
+    example:
+      data:
+      - currentCount: 0
+        maturityLevel: maturityLevel
+        expectedCount: 6
+      - currentCount: 0
+        maturityLevel: maturityLevel
+        expectedCount: 6
+  LogInformation:
+    type: object
+    required:
+    - dateTime
+    - objectId
+    - objectName
+    - objectType
+    - operation
+    - userEID
+    - userName
+    properties:
+      objectId:
+        type: string
+      objectName:
+        type: string
+      objectType:
+        type: string
+      dateTime:
+        type: string
+      userEID:
+        type: string
+      userName:
+        type: string
+      operation:
+        type: string
+    example:
+      dateTime: dateTime
+      objectName: objectName
+      userName: userName
+      operation: operation
+      objectId: objectId
+      objectType: objectType
+      userEID: userEID
+  PaginatedLogInformation:
+    type: object
+    properties:
+      total:
+        type: integer
+      page:
+        type: integer
+      pageSize:
+        type: integer
+      items:
+        type: array
+        items:
+          $ref: '#/definitions/LogInformation'
+    example:
+      total: 0
+      pageSize: 1
+      page: 6
+      items:
+      - dateTime: dateTime
+        objectName: objectName
+        userName: userName
+        operation: operation
+        objectId: objectId
+        objectType: objectType
+        userEID: userEID
+      - dateTime: dateTime
+        objectName: objectName
+        userName: userName
+        operation: operation
+        objectId: objectId
+        objectType: objectType
+        userEID: userEID

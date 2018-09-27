@@ -1,0 +1,28 @@
+{
+  "roles": [
+    { "label": "Leader", "value": "Leader" },
+    { "label": "Manager", "value": "Manager" },
+    { "label": "Director", "value": "Director" }
+  ],
+  "statues": [
+    { "label": "Active", "value": "Active" },
+    { "label": "Inactive", "value": "Inactive" }
+  ],
+  "marturities": [
+    { "label": "Basic", "value": "Basic" },
+    { "label": "Advanced", "value": "Advanced" },
+    { "label": "Intermediate", "value": "Intermediate" },
+    { "label": "New to Skill", "value": "New to Skill" }
+  ],
+  "groupBy": [
+    { "label": "Country", "value": "country" },
+    { "label": "Division", "value": "division" },
+    { "label": "Sub Group", "value": "subGroup" },
+    { "label": "Profile", "value": "profile" }
+  ],
+  "countries": [
+    { "label": "North America", "value": "North America" },
+    { "label": "South America", "value": "South America" },
+    { "label": "Canada", "value": "Canada" }
+  ]
+}

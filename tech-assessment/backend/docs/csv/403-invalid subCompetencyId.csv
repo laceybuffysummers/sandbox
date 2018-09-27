@@ -1,0 +1,4 @@
+competencyId,subCompetencyId,employeeEID,currentMaturity,expectedMaturity
+1,4,EID004,1,3
+1,4,EID001,2,2
+1,4,EID003,3,3

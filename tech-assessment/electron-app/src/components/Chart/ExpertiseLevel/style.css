@@ -1,0 +1,85 @@
+.expertise-level-chart {
+    width: 440px;
+    display: flex;
+    flex-direction: column;
+}
+
+.expertise-level-chart .bar {
+    display: flex;
+    align-items: center;
+    padding-bottom: 40px;
+}
+
+.expertise-level-chart .bar label {
+    font-size: 12px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: normal;
+    text-align: right;
+    color: #4a4a4a;
+    width: 80px;
+}
+
+.expertise-level-chart .bar .column {
+    width: 230px;
+    height: 20px;
+    background: #ccc;
+    margin: 0 30px 0 30px;
+}
+
+.expertise-level-chart .bar .column .value {
+    font-size: 12px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: normal;
+    position: absolute;
+    right: 0;
+    top: -17px;
+    transform: translateX(50%);
+    white-space: nowrap;
+}
+
+.expertise-level-chart .bar .column .progress {
+    width: 0%;
+    height: 20px;
+    position: relative;
+    transition: all 1s;
+}
+
+.expertise-level-chart .bar:nth-child(1) .column {
+    background: #fbe9d5;
+}
+
+.expertise-level-chart .bar:nth-child(1) .column .progress {
+    background: #eb8e2b;
+    color: #eb8e2b;
+}
+
+.expertise-level-chart .bar:nth-child(2) .column {
+    background: #cce5f3;
+}
+
+.expertise-level-chart .bar:nth-child(2) .column .progress {
+    background: #007ac2;
+    color: #007ac2;
+}
+
+.expertise-level-chart .bar:nth-child(3) .column {
+    background: #e9dff2;
+}
+
+.expertise-level-chart .bar:nth-child(3) .column .progress {
+    background: #925fbe;
+    color: #925fbe;
+}
+
+.expertise-level-chart .bar:nth-child(4) .column {
+    background: #e7f4da;
+}
+
+.expertise-level-chart .bar:nth-child(4) .column .progress {
+    background: #87c346;
+    color: #87c346;
+}

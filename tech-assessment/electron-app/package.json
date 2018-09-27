@@ -1,0 +1,60 @@
+{
+  "name": "tech_assessment_app",
+  "version": "0.1.0",
+  "private": true,
+  "author": "Topcoder",
+  "devDependencies": {
+    "concurrently": "^3.6.0",
+    "electron": "^1.7.9",
+    "electron-builder": "^20.18.0",
+    "foreman": "^2.0.0",
+    "http-server": "^0.11.1",
+    "react-scripts": "0.8.5",
+    "standard": "^11.0.1",
+    "wait-on": "^2.1.0"
+  },
+  "dependencies": {
+    "atob": "^2.1.1",
+    "axios": "^0.18.0",
+    "chart.js": "^2.7.2",
+    "electron-is-dev": "^0.3.0",
+    "history": "^4.7.2",
+    "lodash": "^4.17.10",
+    "prop-types": "^15.6.2",
+    "react": "^16.1.1",
+    "react-chartjs-2": "^2.7.2",
+    "react-dom": "^16.1.1",
+    "react-redux": "^5.0.7",
+    "react-router": "^4.3.1",
+    "react-router-redux": "^5.0.0-alpha.9",
+    "redux": "^4.0.0",
+    "redux-act": "^1.7.4",
+    "redux-form": "^7.4.2",
+    "redux-saga": "^0.16.0"
+  },
+  "homepage": "./",
+  "build": {
+    "productName": "Eaton - Tech Assessment",
+    "appId": "com.topcoder.tech.assessment",
+    "directories": {
+      "buildResources": "assets"
+    },
+    "win": {
+      "target": "nsis"
+    }
+  },
+  "main": "public/electron.js",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "electron": "electron .",
+    "electron-dev": "concurrently \"BROWSER=none npm start\" \"wait-on http://localhost:3000 && electron .\"",
+    "electron-pack": "build -c.extraMetadata..main=build/electron.js",
+    "electron-pack-all": "electron-builder -mwl -c.extraMetadata..main=build/electron.js",
+    "electron-pack:win": "electron-builder --win --ia32 --x64 -c.extraMetadata..main=build/electron.js",
+    "lint": "./node_modules/.bin/standard",
+    "lint-fix": "./node_modules/.bin/standard --fix"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "authExpiresIn": "7d",
+  "authSecret": "secret",
+  "port": 3010,
+  "logLevel": "debug",
+  "version": "v1",
+  "dbUrl": "mssql://SA:Strong!Passw0rd@localhost/techassessment"
+}

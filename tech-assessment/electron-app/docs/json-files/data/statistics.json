@@ -1,0 +1,27 @@
+{
+  "expertiseLevel": [
+    {
+      "label": "New to Skill",
+      "value": 115,
+      "total": 230
+    },
+    {
+      "label": "Basic",
+      "value": 130,
+      "total": 152
+    },
+    {
+      "label": "Intermediate",
+      "value": 156,
+      "total": 392
+    },
+    {
+      "label": "Advanced",
+      "value": 32,
+      "total": 113
+    }
+  ],
+  "population": [10, 15, 70, 5],
+  "current": [48, 87, 72, 53],
+  "expected": [59, 97, 87, 72]
+}

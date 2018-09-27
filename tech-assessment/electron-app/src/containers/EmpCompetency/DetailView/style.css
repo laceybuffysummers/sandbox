@@ -1,0 +1,19 @@
+.detail-levels {
+  padding: 25px;
+  width: 100%;
+}
+
+.detail-levels .level-content p.description {
+  font-size: 12px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #4a4a4a;
+  margin: 0;
+  padding: 0 0 15px 0;
+}
+.detail-levels .level-content {
+  padding: 5px 25px;
+}

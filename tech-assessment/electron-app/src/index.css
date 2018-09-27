@@ -1,0 +1,44 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  overflow: hidden;
+}
+* {
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+}
+
+a, button {
+  cursor: pointer;
+}
+
+@media print {
+  body {
+    overflow: auto;
+  }
+  header, aside, footer, .blue-bg .filter-section, .button {
+    display: none;
+  }
+  .main-content {
+    height: auto;
+  }
+  .main-content .blue-bg {
+    height: auto;
+    width: 11in;
+    position: absolute;
+  }
+  .main-content .blue-bg .charts {
+    display: block;
+    height: 8in;
+    page-break-before: always;
+  }
+  .main-content .chart-wrapper {
+    display: block;
+  }
+  .main-content .chart-wrapper.half-width {
+    width: 100%;
+    box-shadow: none;
+    border: 0;
+  }
+}

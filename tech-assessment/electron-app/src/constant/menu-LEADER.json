@@ -1,0 +1,41 @@
+[
+    {
+      "name": "Manage",
+      "image": "Manage.svg",
+      "expand": true,
+      "nodes": [
+        {
+          "name": "Users",
+          "route": "/home/user",
+          "image": "Users.svg"
+        },
+        {
+          "name": "Employee",
+          "route": "/home/employee",
+          "image": "Employee.svg"
+        },
+        {
+          "name": "Employee Competency",
+          "image": "EmployeeCompetency.svg",
+          "route": "/home/empcompetency"
+        }
+      ]
+    },
+    {
+      "name": "Competencies",
+      "image": "Competency.svg",
+      "expand": true,
+      "nodes": [
+        {
+          "id": null,
+          "name": "More..",
+          "route": "/home/competencies"
+        }
+      ]
+    },
+    {
+      "name": "Aggregate Totals",
+      "image": "Aggregate.svg",
+      "route": "/home/aggregatetotal"
+    }
+  ]

@@ -1,0 +1,8 @@
+[
+  { "label": "TOOL", "value": "1" },
+  { "label": "CODING", "value": "2" },
+  { "label": "SSD", "value": "3" },
+  { "label": "Competency A", "value": "4" },
+  { "label": "Competency B", "value": "5" },
+  { "label": "Competency C", "value": "6" }
+]

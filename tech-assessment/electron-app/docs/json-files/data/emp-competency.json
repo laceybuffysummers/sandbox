@@ -1,0 +1,1171 @@
+[
+  {
+    "id": 1,
+    "name": "CODING GROUP",
+    "subCompetency": [
+      {
+        "id": 1,
+        "name": "Subcompetency A",
+        "levels": [
+          {
+            "id": 1,
+            "name": "Level 1",
+            "description": "Basic usage of IDE to compile code and check code into a code repository. No knowledge of how IDE works. Knows one major IDE.",
+            "activities": [
+              {
+                "id": 1,
+                "name": "Perform code compilation via IDE - (On-the-Job training)",
+                "employees": [
+                  {
+                    "EID": 1,
+                    "name": "James Scoot",
+                    "position": "Software Manager",
+                    "maturity": "Basic",
+                    "progress": 100,
+                    "completed": false
+                  },
+                  {
+                    "EID": 2,
+                    "name": "Susan Hart",
+                    "position": "Senior Architect",
+                    "maturity": "Basic",
+                    "progress": 30,
+                    "completed": true
+                  },
+                  {
+                    "EID": 3,
+                    "name": "Billy Bob",
+                    "position": "Developer 2",
+                    "maturity": "Advanced",
+                    "progress": 50,
+                    "completed": true
+                  },
+                  {
+                    "EID": 4,
+                    "name": "Jim Grey",
+                    "position": "Data Science Manager",
+                    "maturity": "Basic",
+                    "progress": 50,
+                    "completed": true
+                  },
+                  {
+                    "EID": 5,
+                    "name": "Dana Smith",
+                    "position": "Senior Developer",
+                    "maturity": "Intermediate",
+                    "progress": 100,
+                    "completed": false
+                  },
+                  {
+                    "EID": 6,
+                    "name": "Any Wong",
+                    "position": "Lead Developer",
+                    "maturity": "Intermediate",
+                    "progress": 80,
+                    "completed": true
+                  }
+                ]
+              },
+              {
+                "id": 2,
+                "name": "Check code into source control including comments using IDE - (On-the-Job training)",
+                "employees": [
+                  {
+                    "EID": 1,
+                    "name": "James Scoot",
+                    "position": "Software Manager",
+                    "maturity": "Basic",
+                    "progress": 100,
+                    "completed": false
+                  },
+                  {
+                    "EID": 2,
+                    "name": "Susan Hart",
+                    "position": "Senior Architect",
+                    "maturity": "Basic",
+                    "progress": 30,
+                    "completed": true
+                  },
+                  {
+                    "EID": 3,
+                    "name": "Billy Bob",
+                    "position": "Developer 2",
+                    "maturity": "Advanced",
+                    "progress": 50,
+                    "completed": true
+                  },
+                  {
+                    "EID": 4,
+                    "name": "Jim Grey",
+                    "position": "Data Science Manager",
+                    "maturity": "Basic",
+                    "progress": 50,
+                    "completed": true
+                  },
+                  {
+                    "EID": 5,
+                    "name": "Dana Smith",
+                    "position": "Senior Developer",
+                    "maturity": "Intermediate",
+                    "progress": 100,
+                    "completed": false
+                  },
+                  {
+                    "EID": 6,
+                    "name": "Any Wong",
+                    "position": "Lead Developer",
+                    "maturity": "Intermediate",
+                    "progress": 80,
+                    "completed": true
+                  }
+                ]
+              },
+              {
+                "id": 3,
+                "name": "Review compile errors in IDE - (On-the-Job training)",
+                "employees": [
+                  {
+                    "EID": 1,
+                    "name": "James Scoot",
+                    "position": "Software Manager",
+                    "maturity": "Basic",
+                    "progress": 100,
+                    "completed": false
+                  },
+                  {
+                    "EID": 2,
+                    "name": "Susan Hart",
+                    "position": "Senior Architect",
+                    "maturity": "Basic",
+                    "progress": 30,
+                    "completed": true
+                  },
+                  {
+                    "EID": 3,
+                    "name": "Billy Bob",
+                    "position": "Developer 2",
+                    "maturity": "Advanced",
+                    "progress": 50,
+                    "completed": true
+                  },
+                  {
+                    "EID": 4,
+                    "name": "Jim Grey",
+                    "position": "Data Science Manager",
+                    "maturity": "Basic",
+                    "progress": 50,
+                    "completed": true
+                  },
+                  {
+                    "EID": 5,
+                    "name": "Dana Smith",
+                    "position": "Senior Developer",
+                    "maturity": "Intermediate",
+                    "progress": 100,
+                    "completed": false
+                  },
+                  {
+                    "EID": 6,
+                    "name": "Any Wong",
+                    "position": "Lead Developer",
+                    "maturity": "Intermediate",
+                    "progress": 80,
+                    "completed": true
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "name": "Level 1",
+            "description": "Basic usage of IDE to compile code and check code into a code repository. No knowledge of how IDE works. Knows one major IDE.",
+            "activities": [
+              {
+                "id": 1,
+                "name": "Perform code compilation via IDE - (On-the-Job training)",
+                "employees": [
+                  {
+                    "EID": 1,
+                    "name": "James Scoot",
+                    "position": "Software Manager",
+                    "maturity": "Basic",
+                    "progress": 100,
+                    "completed": false
+                  },
+                  {
+                    "EID": 2,
+                    "name": "Susan Hart",
+                    "position": "Senior Architect",
+                    "maturity": "Basic",
+                    "progress": 30,
+                    "completed": true
+                  },
+                  {
+                    "EID": 3,
+                    "name": "Billy Bob",
+                    "position": "Developer 2",
+                    "maturity": "Advanced",
+                    "progress": 50,
+                    "completed": true
+                  },
+                  {
+                    "EID": 4,
+                    "name": "Jim Grey",
+                    "position": "Data Science Manager",
+                    "maturity": "Basic",
+                    "progress": 50,
+                    "completed": true
+                  },
+                  {
+                    "EID": 5,
+                    "name": "Dana Smith",
+                    "position": "Senior Developer",
+                    "maturity": "Intermediate",
+                    "progress": 100,
+                    "completed": false
+                  },
+                  {
+                    "EID": 6,
+                    "name": "Any Wong",
+                    "position": "Lead Developer",
+                    "maturity": "Intermediate",
+                    "progress": 80,
+                    "completed": true
+                  }
+                ]
+              },
+              {
+                "id": 2,
+                "name": "Check code into source control including comments using IDE - (On-the-Job training)",
+                "employees": [
+                  {
+                    "EID": 1,
+                    "name": "James Scoot",
+                    "position": "Software Manager",
+                    "maturity": "Basic",
+                    "progress": 100,
+                    "completed": false
+                  },
+                  {
+                    "EID": 2,
+                    "name": "Susan Hart",
+                    "position": "Senior Architect",
+                    "maturity": "Basic",
+                    "progress": 30,
+                    "completed": true
+                  },
+                  {
+                    "EID": 3,
+                    "name": "Billy Bob",
+                    "position": "Developer 2",
+                    "maturity": "Advanced",
+                    "progress": 50,
+                    "completed": true
+                  },
+                  {
+                    "EID": 4,
+                    "name": "Jim Grey",
+                    "position": "Data Science Manager",
+                    "maturity": "Basic",
+                    "progress": 50,
+                    "completed": true
+                  },
+                  {
+                    "EID": 5,
+                    "name": "Dana Smith",
+                    "position": "Senior Developer",
+                    "maturity": "Intermediate",
+                    "progress": 100,
+                    "completed": false
+                  },
+                  {
+                    "EID": 6,
+                    "name": "Any Wong",
+                    "position": "Lead Developer",
+                    "maturity": "Intermediate",
+                    "progress": 80,
+                    "completed": true
+                  }
+                ]
+              },
+              {
+                "id": 3,
+                "name": "Review compile errors in IDE - (On-the-Job training)",
+                "employees": [
+                  {
+                    "EID": 1,
+                    "name": "James Scoot",
+                    "position": "Software Manager",
+                    "maturity": "Basic",
+                    "progress": 100,
+                    "completed": false
+                  },
+                  {
+                    "EID": 2,
+                    "name": "Susan Hart",
+                    "position": "Senior Architect",
+                    "maturity": "Basic",
+                    "progress": 30,
+                    "completed": true
+                  },
+                  {
+                    "EID": 3,
+                    "name": "Billy Bob",
+                    "position": "Developer 2",
+                    "maturity": "Advanced",
+                    "progress": 50,
+                    "completed": true
+                  },
+                  {
+                    "EID": 4,
+                    "name": "Jim Grey",
+                    "position": "Data Science Manager",
+                    "maturity": "Basic",
+                    "progress": 50,
+                    "completed": true
+                  },
+                  {
+                    "EID": 5,
+                    "name": "Dana Smith",
+                    "position": "Senior Developer",
+                    "maturity": "Intermediate",
+                    "progress": 100,
+                    "completed": false
+                  },
+                  {
+                    "EID": 6,
+                    "name": "Any Wong",
+                    "position": "Lead Developer",
+                    "maturity": "Intermediate",
+                    "progress": 80,
+                    "completed": true
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Subcompetency B",
+        "levels": [
+          {
+            "name": "Level 2 - A",
+            "description": "Basic usage of IDE to compile code and check code into a code repository. No knowledge of how IDE works. Knows one major IDE.",
+            "activities": [
+              {
+                "id": 1,
+                "name": "Perform code compilation via IDE - (On-the-Job training)",
+                "employees": [
+                  {
+                    "EID": 1,
+                    "name": "James Scoot",
+                    "position": "Software Manager",
+                    "maturity": "Basic",
+                    "progress": 100,
+                    "completed": false
+                  },
+                  {
+                    "EID": 2,
+                    "name": "Susan Hart",
+                    "position": "Senior Architect",
+                    "maturity": "Basic",
+                    "progress": 30,
+                    "completed": true
+                  },
+                  {
+                    "EID": 3,
+                    "name": "Billy Bob",
+                    "position": "Developer 2",
+                    "maturity": "Advanced",
+                    "progress": 50,
+                    "completed": true
+                  },
+                  {
+                    "EID": 4,
+                    "name": "Jim Grey",
+                    "position": "Data Science Manager",
+                    "maturity": "Basic",
+                    "progress": 50,
+                    "completed": true
+                  },
+                  {
+                    "EID": 5,
+                    "name": "Dana Smith",
+                    "position": "Senior Developer",
+                    "maturity": "Intermediate",
+                    "progress": 100,
+                    "completed": false
+                  },
+                  {
+                    "EID": 6,
+                    "name": "Any Wong",
+                    "position": "Lead Developer",
+                    "maturity": "Intermediate",
+                    "progress": 80,
+                    "completed": true
+                  }
+                ]
+              },
+              {
+                "id": 2,
+                "name": "Check code into source control including comments using IDE - (On-the-Job training)",
+                "employees": [
+                  {
+                    "EID": 1,
+                    "name": "James Scoot",
+                    "position": "Software Manager",
+                    "maturity": "Basic",
+                    "progress": 100,
+                    "completed": false
+                  },
+                  {
+                    "EID": 2,
+                    "name": "Susan Hart",
+                    "position": "Senior Architect",
+                    "maturity": "Basic",
+                    "progress": 30,
+                    "completed": true
+                  },
+                  {
+                    "EID": 3,
+                    "name": "Billy Bob",
+                    "position": "Developer 2",
+                    "maturity": "Advanced",
+                    "progress": 50,
+                    "completed": true
+                  },
+                  {
+                    "EID": 4,
+                    "name": "Jim Grey",
+                    "position": "Data Science Manager",
+                    "maturity": "Basic",
+                    "progress": 50,
+                    "completed": true
+                  },
+                  {
+                    "EID": 5,
+                    "name": "Dana Smith",
+                    "position": "Senior Developer",
+                    "maturity": "Intermediate",
+                    "progress": 100,
+                    "completed": false
+                  },
+                  {
+                    "EID": 6,
+                    "name": "Any Wong",
+                    "position": "Lead Developer",
+                    "maturity": "Intermediate",
+                    "progress": 80,
+                    "completed": true
+                  }
+                ]
+              },
+              {
+                "id": 3,
+                "name": "Review compile errors in IDE - (On-the-Job training)",
+                "employees": [
+                  {
+                    "EID": 1,
+                    "name": "James Scoot",
+                    "position": "Software Manager",
+                    "maturity": "Basic",
+                    "progress": 100,
+                    "completed": false
+                  },
+                  {
+                    "EID": 2,
+                    "name": "Susan Hart",
+                    "position": "Senior Architect",
+                    "maturity": "Basic",
+                    "progress": 30,
+                    "completed": true
+                  },
+                  {
+                    "EID": 3,
+                    "name": "Billy Bob",
+                    "position": "Developer 2",
+                    "maturity": "Advanced",
+                    "progress": 50,
+                    "completed": true
+                  },
+                  {
+                    "EID": 4,
+                    "name": "Jim Grey",
+                    "position": "Data Science Manager",
+                    "maturity": "Basic",
+                    "progress": 50,
+                    "completed": true
+                  },
+                  {
+                    "EID": 5,
+                    "name": "Dana Smith",
+                    "position": "Senior Developer",
+                    "maturity": "Intermediate",
+                    "progress": 100,
+                    "completed": false
+                  },
+                  {
+                    "EID": 6,
+                    "name": "Any Wong",
+                    "position": "Lead Developer",
+                    "maturity": "Intermediate",
+                    "progress": 80,
+                    "completed": true
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "name": "TOOLS GROUP",
+    "subCompetency": [
+      {
+        "id": 20,
+        "name": "Subcompetency A",
+        "levels": [
+          {
+            "id": 21,
+            "name": "Level 1",
+            "description": "Basic usage of IDE to compile code and check code into a code repository. No knowledge of how IDE works. Knows one major IDE.",
+            "activities": [
+              {
+                "name": "Perform code compilation via IDE - (On-the-Job training)"
+              },
+              {
+                "name": "Check code into source control including comments using IDE - (On-the-Job training)"
+              },
+              {
+                "name": "Review compile errors in IDE - (On-the-Job training)"
+              }
+            ],
+            "employees": [
+              {
+                "EID": 1,
+                "name": "James Scoot",
+                "position": "Software Manager",
+                "maturity": "Basic",
+                "progress": 100,
+                "completed": false
+              },
+              {
+                "EID": 2,
+                "name": "Susan Hart",
+                "position": "Senior Architect",
+                "maturity": "Basic",
+                "progress": 30,
+                "completed": true
+              },
+              {
+                "EID": 3,
+                "name": "Billy Bob",
+                "position": "Developer 2",
+                "maturity": "Advanced",
+                "progress": 50,
+                "completed": true
+              },
+              {
+                "EID": 4,
+                "name": "Jim Grey",
+                "position": "Data Science Manager",
+                "maturity": "Basic",
+                "progress": 50,
+                "completed": true
+              },
+              {
+                "EID": 5,
+                "name": "Dana Smith",
+                "position": "Senior Developer",
+                "maturity": "Intermediate",
+                "progress": 100,
+                "completed": false
+              },
+              {
+                "EID": 6,
+                "name": "Any Wong",
+                "position": "Lead Developer",
+                "maturity": "Intermediate",
+                "progress": 80,
+                "completed": true
+              }
+            ]
+          },
+          {
+            "id": 22,
+            "name": "Level 1",
+            "description": "Basic usage of IDE to compile code and check code into a code repository. No knowledge of how IDE works. Knows one major IDE.",
+            "activities": [
+              {
+                "name": "Perform code compilation via IDE - (On-the-Job training)"
+              },
+              {
+                "name": "Check code into source control including comments using IDE - (On-the-Job training)"
+              },
+              {
+                "name": "Review compile errors in IDE - (On-the-Job training)"
+              }
+            ],
+            "employees": [
+              {
+                "EID": 1,
+                "name": "James Scoot",
+                "position": "Software Manager",
+                "maturity": "Basic",
+                "progress": 100,
+                "completed": false
+              },
+              {
+                "EID": 2,
+                "name": "Susan Hart",
+                "position": "Senior Architect",
+                "maturity": "Basic",
+                "progress": 30,
+                "completed": true
+              },
+              {
+                "EID": 3,
+                "name": "Billy Bob",
+                "position": "Developer 2",
+                "maturity": "Advanced",
+                "progress": 50,
+                "completed": true
+              },
+              {
+                "EID": 4,
+                "name": "Jim Grey",
+                "position": "Data Science Manager",
+                "maturity": "Basic",
+                "progress": 50,
+                "completed": true
+              },
+              {
+                "EID": 5,
+                "name": "Dana Smith",
+                "position": "Senior Developer",
+                "maturity": "Intermediate",
+                "progress": 100,
+                "completed": false
+              },
+              {
+                "EID": 6,
+                "name": "Any Wong",
+                "position": "Lead Developer",
+                "maturity": "Intermediate",
+                "progress": 80,
+                "completed": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 22,
+        "name": "Subcompetency B",
+        "levels": [
+          {
+            "name": "Level 2 - A",
+            "description": "Basic usage of IDE to compile code and check code into a code repository. No knowledge of how IDE works. Knows one major IDE.",
+            "activities": [
+              {
+                "name": "Perform code compilation via IDE - (On-the-Job training)"
+              },
+              {
+                "name": "Check code into source control including comments using IDE - (On-the-Job training)"
+              },
+              {
+                "name": "Review compile errors in IDE - (On-the-Job training)"
+              }
+            ],
+            "employees": [
+              {
+                "EID": 1,
+                "name": "James Scoot",
+                "position": "Software Manager",
+                "maturity": "Basic",
+                "progress": 100,
+                "completed": false
+              },
+              {
+                "EID": 2,
+                "name": "Susan Hart",
+                "position": "Senior Architect",
+                "maturity": "Basic",
+                "progress": 30,
+                "completed": true
+              },
+              {
+                "EID": 3,
+                "name": "Billy Bob",
+                "position": "Developer 2",
+                "maturity": "Advanced",
+                "progress": 50,
+                "completed": true
+              },
+              {
+                "EID": 4,
+                "name": "Jim Grey",
+                "position": "Data Science Manager",
+                "maturity": "Basic",
+                "progress": 50,
+                "completed": true
+              },
+              {
+                "EID": 5,
+                "name": "Dana Smith",
+                "position": "Senior Developer",
+                "maturity": "Intermediate",
+                "progress": 100,
+                "completed": false
+              },
+              {
+                "EID": 6,
+                "name": "Any Wong",
+                "position": "Lead Developer",
+                "maturity": "Intermediate",
+                "progress": 80,
+                "completed": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "name": "SSD GROUP",
+    "subCompetency": [
+      {
+        "id": 30,
+        "name": "Subcompetency A",
+        "levels": [
+          {
+            "id": 31,
+            "name": "Level 1",
+            "description": "Basic usage of IDE to compile code and check code into a code repository. No knowledge of how IDE works. Knows one major IDE.",
+            "activities": [
+              {
+                "name": "Perform code compilation via IDE - (On-the-Job training)"
+              },
+              {
+                "name": "Check code into source control including comments using IDE - (On-the-Job training)"
+              },
+              {
+                "name": "Review compile errors in IDE - (On-the-Job training)"
+              }
+            ],
+            "employees": [
+              {
+                "EID": 1,
+                "name": "James Scoot",
+                "position": "Software Manager",
+                "maturity": "Basic",
+                "progress": 100,
+                "completed": false
+              },
+              {
+                "EID": 2,
+                "name": "Susan Hart",
+                "position": "Senior Architect",
+                "maturity": "Basic",
+                "progress": 30,
+                "completed": true
+              },
+              {
+                "EID": 3,
+                "name": "Billy Bob",
+                "position": "Developer 2",
+                "maturity": "Advanced",
+                "progress": 50,
+                "completed": true
+              },
+              {
+                "EID": 4,
+                "name": "Jim Grey",
+                "position": "Data Science Manager",
+                "maturity": "Basic",
+                "progress": 50,
+                "completed": true
+              },
+              {
+                "EID": 5,
+                "name": "Dana Smith",
+                "position": "Senior Developer",
+                "maturity": "Intermediate",
+                "progress": 100,
+                "completed": false
+              },
+              {
+                "EID": 6,
+                "name": "Any Wong",
+                "position": "Lead Developer",
+                "maturity": "Intermediate",
+                "progress": 80,
+                "completed": true
+              }
+            ]
+          },
+          {
+            "id": 32,
+            "name": "Level 1",
+            "description": "Basic usage of IDE to compile code and check code into a code repository. No knowledge of how IDE works. Knows one major IDE.",
+            "activities": [
+              {
+                "name": "Perform code compilation via IDE - (On-the-Job training)"
+              },
+              {
+                "name": "Check code into source control including comments using IDE - (On-the-Job training)"
+              },
+              {
+                "name": "Review compile errors in IDE - (On-the-Job training)"
+              }
+            ],
+            "employees": [
+              {
+                "EID": 1,
+                "name": "James Scoot",
+                "position": "Software Manager",
+                "maturity": "Basic",
+                "progress": 100,
+                "completed": false
+              },
+              {
+                "EID": 2,
+                "name": "Susan Hart",
+                "position": "Senior Architect",
+                "maturity": "Basic",
+                "progress": 30,
+                "completed": true
+              },
+              {
+                "EID": 3,
+                "name": "Billy Bob",
+                "position": "Developer 2",
+                "maturity": "Advanced",
+                "progress": 50,
+                "completed": true
+              },
+              {
+                "EID": 4,
+                "name": "Jim Grey",
+                "position": "Data Science Manager",
+                "maturity": "Basic",
+                "progress": 50,
+                "completed": true
+              },
+              {
+                "EID": 5,
+                "name": "Dana Smith",
+                "position": "Senior Developer",
+                "maturity": "Intermediate",
+                "progress": 100,
+                "completed": false
+              },
+              {
+                "EID": 6,
+                "name": "Any Wong",
+                "position": "Lead Developer",
+                "maturity": "Intermediate",
+                "progress": 80,
+                "completed": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 32,
+        "name": "Subcompetency B",
+        "levels": [
+          {
+            "name": "Level 2 - A",
+            "description": "Basic usage of IDE to compile code and check code into a code repository. No knowledge of how IDE works. Knows one major IDE.",
+            "activities": [
+              {
+                "name": "Perform code compilation via IDE - (On-the-Job training)"
+              },
+              {
+                "name": "Check code into source control including comments using IDE - (On-the-Job training)"
+              },
+              {
+                "name": "Review compile errors in IDE - (On-the-Job training)"
+              }
+            ],
+            "employees": [
+              {
+                "EID": 1,
+                "name": "James Scoot",
+                "position": "Software Manager",
+                "maturity": "Basic",
+                "progress": 100,
+                "completed": false
+              },
+              {
+                "EID": 2,
+                "name": "Susan Hart",
+                "position": "Senior Architect",
+                "maturity": "Basic",
+                "progress": 30,
+                "completed": true
+              },
+              {
+                "EID": 3,
+                "name": "Billy Bob",
+                "position": "Developer 2",
+                "maturity": "Advanced",
+                "progress": 50,
+                "completed": true
+              },
+              {
+                "EID": 4,
+                "name": "Jim Grey",
+                "position": "Data Science Manager",
+                "maturity": "Basic",
+                "progress": 50,
+                "completed": true
+              },
+              {
+                "EID": 5,
+                "name": "Dana Smith",
+                "position": "Senior Developer",
+                "maturity": "Intermediate",
+                "progress": 100,
+                "completed": false
+              },
+              {
+                "EID": 6,
+                "name": "Any Wong",
+                "position": "Lead Developer",
+                "maturity": "Intermediate",
+                "progress": 80,
+                "completed": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 40,
+    "name": "OTHER COMPETENCY GROUP",
+    "subCompetency": [
+      {
+        "id": 40,
+        "name": "Subcompetency A",
+        "levels": [
+          {
+            "id": 41,
+            "name": "Level 1",
+            "description": "Basic usage of IDE to compile code and check code into a code repository. No knowledge of how IDE works. Knows one major IDE.",
+            "activities": [
+              {
+                "name": "Perform code compilation via IDE - (On-the-Job training)"
+              },
+              {
+                "name": "Check code into source control including comments using IDE - (On-the-Job training)"
+              },
+              {
+                "name": "Review compile errors in IDE - (On-the-Job training)"
+              }
+            ],
+            "employees": [
+              {
+                "EID": 1,
+                "name": "James Scoot",
+                "position": "Software Manager",
+                "maturity": "Basic",
+                "progress": 100,
+                "completed": false
+              },
+              {
+                "EID": 2,
+                "name": "Susan Hart",
+                "position": "Senior Architect",
+                "maturity": "Basic",
+                "progress": 30,
+                "completed": true
+              },
+              {
+                "EID": 3,
+                "name": "Billy Bob",
+                "position": "Developer 2",
+                "maturity": "Advanced",
+                "progress": 50,
+                "completed": true
+              },
+              {
+                "EID": 4,
+                "name": "Jim Grey",
+                "position": "Data Science Manager",
+                "maturity": "Basic",
+                "progress": 50,
+                "completed": true
+              },
+              {
+                "EID": 5,
+                "name": "Dana Smith",
+                "position": "Senior Developer",
+                "maturity": "Intermediate",
+                "progress": 100,
+                "completed": false
+              },
+              {
+                "EID": 6,
+                "name": "Any Wong",
+                "position": "Lead Developer",
+                "maturity": "Intermediate",
+                "progress": 80,
+                "completed": true
+              }
+            ]
+          },
+          {
+            "id": 42,
+            "name": "Level 1",
+            "description": "Basic usage of IDE to compile code and check code into a code repository. No knowledge of how IDE works. Knows one major IDE.",
+            "activities": [
+              {
+                "name": "Perform code compilation via IDE - (On-the-Job training)"
+              },
+              {
+                "name": "Check code into source control including comments using IDE - (On-the-Job training)"
+              },
+              {
+                "name": "Review compile errors in IDE - (On-the-Job training)"
+              }
+            ],
+            "employees": [
+              {
+                "EID": 1,
+                "name": "James Scoot",
+                "position": "Software Manager",
+                "maturity": "Basic",
+                "progress": 100,
+                "completed": false
+              },
+              {
+                "EID": 2,
+                "name": "Susan Hart",
+                "position": "Senior Architect",
+                "maturity": "Basic",
+                "progress": 30,
+                "completed": true
+              },
+              {
+                "EID": 3,
+                "name": "Billy Bob",
+                "position": "Developer 2",
+                "maturity": "Advanced",
+                "progress": 50,
+                "completed": true
+              },
+              {
+                "EID": 4,
+                "name": "Jim Grey",
+                "position": "Data Science Manager",
+                "maturity": "Basic",
+                "progress": 50,
+                "completed": true
+              },
+              {
+                "EID": 5,
+                "name": "Dana Smith",
+                "position": "Senior Developer",
+                "maturity": "Intermediate",
+                "progress": 100,
+                "completed": false
+              },
+              {
+                "EID": 6,
+                "name": "Any Wong",
+                "position": "Lead Developer",
+                "maturity": "Intermediate",
+                "progress": 80,
+                "completed": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 42,
+        "name": "Subcompetency B",
+        "levels": [
+          {
+            "name": "Level 2 - A",
+            "description": "Basic usage of IDE to compile code and check code into a code repository. No knowledge of how IDE works. Knows one major IDE.",
+            "activities": [
+              {
+                "name": "Perform code compilation via IDE - (On-the-Job training)"
+              },
+              {
+                "name": "Check code into source control including comments using IDE - (On-the-Job training)"
+              },
+              {
+                "name": "Review compile errors in IDE - (On-the-Job training)"
+              }
+            ],
+            "employees": [
+              {
+                "EID": 1,
+                "name": "James Scoot",
+                "position": "Software Manager",
+                "maturity": "Basic",
+                "progress": 100,
+                "completed": false
+              },
+              {
+                "EID": 2,
+                "name": "Susan Hart",
+                "position": "Senior Architect",
+                "maturity": "Basic",
+                "progress": 30,
+                "completed": true
+              },
+              {
+                "EID": 3,
+                "name": "Billy Bob",
+                "position": "Developer 2",
+                "maturity": "Advanced",
+                "progress": 50,
+                "completed": true
+              },
+              {
+                "EID": 4,
+                "name": "Jim Grey",
+                "position": "Data Science Manager",
+                "maturity": "Basic",
+                "progress": 50,
+                "completed": true
+              },
+              {
+                "EID": 5,
+                "name": "Dana Smith",
+                "position": "Senior Developer",
+                "maturity": "Intermediate",
+                "progress": 100,
+                "completed": false
+              },
+              {
+                "EID": 6,
+                "name": "Any Wong",
+                "position": "Lead Developer",
+                "maturity": "Intermediate",
+                "progress": 80,
+                "completed": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

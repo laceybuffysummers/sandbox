@@ -1,0 +1,28 @@
+.form-input {
+  width: 100%;
+  outline: none;
+  height: 30px;
+  border-radius: 3px;
+  background-color: #ffffff;
+  border: solid 1px rgba(155, 155, 155, 0.28);
+  color: #4a4a4a;
+  padding:  0 10px;
+  font-size: 12px;
+}
+
+.form-input.error-field {
+  border-color: #ff0000;
+}
+
+.form-input::-webkit-input-placeholder {
+  color: rgba(74, 74, 74, 0.5);
+}
+.form-input::-moz-placeholder {
+  color: rgba(74, 74, 74, 0.5);
+}
+.form-input:-ms-input-placeholder {
+  color: rgba(74, 74, 74, 0.5);
+}
+.form-input:-moz-placeholder {
+  color: rgba(74, 74, 74, 0.5);
+}

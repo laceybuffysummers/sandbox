@@ -1,0 +1,8 @@
+competencyId,subCompetencyId,employeeEID,currentMaturity,expectedMaturity
+# Will create a new connection. Will complete all activity IDs 1~6 for EID004, which belong to subCompetencyLevel IDs: 1, 2
+1,1,EID004,1,3
+# Will update an existing connection. Will complete all activity IDs 19~24 for EID001, which belong to subCompetencyLevel IDs: 7, 8
+1,1,EID001,1,2
+# Will ignore the operation because the level in DB is higher than CSV,,,
+1,3,EID002,2,3
+

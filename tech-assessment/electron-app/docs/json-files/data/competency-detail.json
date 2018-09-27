@@ -1,0 +1,140 @@
+{
+  "name": "SSD",
+  "description": "An understanding of how to apply software system design principles to address domain challenges.  The technical application of code to Eaton products.",
+  "image": "SSD.svg",
+  "id": "3",
+  "subCompetencies" :[
+    {
+      "id": "10",
+      "name": "SUBCOMPETENCY A",
+      "levels": [
+        {
+          "id": "100",
+          "name": "Level 1",
+          "activities": [
+            {
+              "id": "1001",
+              "name": "Perform code compilation via IDE - (On-the-Job training)",
+              "items": {
+                "Skill Acquired": "How to compile code",
+                "Life Experience Credit Exceptions": "3+ years of SW development experience"
+              }
+            },
+            {
+              "id": "1002",
+              "name": "Check code into source control including comments using IDE - (On-the-Job training)",
+              "items": {
+                "Skill Acquired": "How to compile code",
+                "Life Experience Credit Exceptions": "3+ years of SW development experience"
+              }
+            },
+            {
+              "id": "1003",
+              "name": "Review compile errors in IDE - (On-the-Job training)",
+              "items": {
+                "Skill Acquired": "How to compile code",
+                "Life Experience Credit Exceptions": "3+ years of SW development experience"
+              }
+            }
+          ]
+        },
+        {
+          "id": "200",
+          "name": "Level 2",
+          "activities": [
+            {
+              "id": "2001",
+              "name": "Perform code compilation via IDE - (On-the-Job training)",
+              "items": {
+                "Skill Acquired": "How to compile code",
+                "Life Experience Credit Exceptions": "3+ years of SW development experience"
+              }
+            },
+            {
+              "id": "2002",
+              "name": "Check code into source control including comments using IDE - (On-the-Job training)",
+              "items": {
+                "Skill Acquired": "How to compile code",
+                "Life Experience Credit Exceptions": "3+ years of SW development experience"
+              }
+            },
+            {
+              "id": "2003",
+              "name": "Review compile errors in IDE - (On-the-Job training)",
+              "items": {
+                "Skill Acquired": "How to compile code",
+                "Life Experience Credit Exceptions": "3+ years of SW development experience"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "20",
+      "name": "SUBCOMPETENCY B",
+      "levels": [
+        {
+          "id": "200",
+          "name": "Level 1B",
+          "activities": [
+            {
+              "id": "2001",
+              "name": "Perform code compilation via IDE - (On-the-Job training)B",
+              "items": {
+                "Skill Acquired": "How to compile code",
+                "Life Experience Credit Exceptions": "3+ years of SW development experience"
+              }
+            },
+            {
+              "id": "2002",
+              "name": "Check code into source control including comments using IDE - (On-the-Job training)B",
+              "items": {
+                "Skill Acquired": "How to compile code",
+                "Life Experience Credit Exceptions": "3+ years of SW development experience"
+              }
+            },
+            {
+              "id": "2003",
+              "name": "Review compile errors in IDE - (On-the-Job training)B",
+              "items": {
+                "Skill Acquired": "How to compile code",
+                "Life Experience Credit Exceptions": "3+ years of SW development experience"
+              }
+            }
+          ]
+        },
+        {
+          "id": "300",
+          "name": "Level 2B",
+          "activities": [
+            {
+              "id": "3001",
+              "name": "Perform code compilation via IDE - (On-the-Job training)B",
+              "items": {
+                "Skill Acquired": "How to compile code",
+                "Life Experience Credit Exceptions": "3+ years of SW development experience"
+              }
+            },
+            {
+              "id": "3002",
+              "name": "Check code into source control including comments using IDE - (On-the-Job training)B",
+              "items": {
+                "Skill Acquired": "How to compile code",
+                "Life Experience Credit Exceptions": "3+ years of SW development experience"
+              }
+            },
+            {
+              "id": "3003",
+              "name": "Review compile errors in IDE - (On-the-Job training)",
+              "items": {
+                "Skill Acquired": "How to compile code",
+                "Life Experience Credit Exceptions": "3+ years of SW development experienceB"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

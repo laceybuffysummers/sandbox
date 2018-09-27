@@ -1,0 +1,10 @@
+[
+  { "label": "Sub Competency 1", "value": "1", "competencyId": "1" },
+  { "label": "Sub Competency 2", "value": "2", "competencyId": "1" },
+  { "label": "Sub Competency 3", "value": "3", "competencyId": "1" },
+  { "label": "Sub Competency 4", "value": "4", "competencyId": "2" },
+  { "label": "Sub Competency 5", "value": "5", "competencyId": "3" },
+  { "label": "Sub Competency 6", "value": "6", "competencyId": "4" },
+  { "label": "Sub Competency 7", "value": "7", "competencyId": "5" },
+  { "label": "Sub Competency 8", "value": "8", "competencyId": "6" }
+]

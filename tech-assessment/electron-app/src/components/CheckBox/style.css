@@ -1,0 +1,19 @@
+.form-checkbox input {
+  display: none;
+}
+
+.form-checkbox span {
+  width: 15px;
+  height: 15px;
+  position: relative;
+  top: 3px;
+  display: inline-block;
+  border-radius: 2px;
+  box-shadow: inset 0 1px 3px 0 rgba(0, 0, 0, 0.5);
+  background-color: #ffffff;
+  border: solid 1px #979797;
+}
+.form-checkbox input:checked + span {
+  background: #0088f2;
+  border: solid 1px #000;
+}

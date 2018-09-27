@@ -1,0 +1,129 @@
+.accordion-wrapper {
+  border-top: 1px solid rgba(151, 151, 151, 0.24);
+  border-bottom: 1px solid rgba(151, 151, 151, 0.24);
+}
+.accordion-wrapper + .accordion-wrapper  {
+  border-top: 0;
+}
+.accordion-wrapper .accordion-header {
+  font-size: 12px;
+  position: relative;
+  cursor: pointer;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  letter-spacing: normal;
+  color: #4a4a4a;
+  display: flex;
+  height: 30px;
+  align-items: center;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+.accordion-wrapper .accordion-header .button {
+  display: none;
+}
+.accordion-wrapper.default .accordion-header {
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+}
+.accordion-wrapper.default .accordion-header img {
+  margin-right: 10px;
+}
+.accordion-wrapper .accordion-header img {
+  width: 10px;
+  height: 6px;
+  transition: all .3s;
+  display: block;
+}
+
+.accordion-wrapper .accordion-header.open img {
+  transform: rotate(-90deg);
+}
+
+/* primary accordion */
+.accordion-wrapper.primary {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  border-top: 0;
+}
+.accordion-wrapper.primary .accordion-header {
+  border: solid 1px #979797;
+  height: 48px;
+  font-size: 14px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  letter-spacing: normal;
+  color: #4a4a4a;
+  justify-content: space-between;
+}
+.accordion-wrapper.primary .accordion-content {
+  border-left: solid 1px #9b9b9b;
+  border-right: solid 1px #9b9b9b;
+  border-bottom: solid 1px #9b9b9b;
+}
+.accordion-wrapper.primary .accordion-header img {
+  width: 14px;
+  height: 8px;
+  background-size: 14px 8px;
+  transform: rotate(-90deg);
+}
+
+.accordion-wrapper.primary .accordion-header.open img {
+  transform: rotate(0deg);
+}
+.accordion-wrapper.primary + .accordion-wrapper.primary {
+  margin-top: 10px;
+}
+
+.accordion-wrapper.primary-special .accordion-header .button {
+  position: absolute;
+  right: 48px;
+  display: block;
+}
+
+/* secondary accordion */
+
+.accordion-wrapper.secondary {
+  border-top: 0;
+  background-color: #ffffff;
+  border-bottom: solid 1px rgba(151, 151, 151, 0.5);
+}
+.accordion-wrapper.secondary .accordion-header {
+  border: solid 1px rgba(151, 151, 151, 0.5);
+  border-bottom: none;
+  height: 40px;
+  font-size: 12px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  letter-spacing: normal;
+  color: #4a4a4a;
+  justify-content: space-between;
+}
+.accordion-wrapper.secondary .accordion-content {
+  border-left: solid 1px rgba(151, 151, 151, 0.5);
+  border-right: solid 1px rgba(151, 151, 151, 0.5);
+  border-bottom: 0;
+}
+.accordion-wrapper.secondary .accordion-header img{
+  width: 9px;
+  height: 5px;
+  background-size: 9px 5px;
+  transform: rotate(-90deg);
+}
+
+.accordion-wrapper.secondary .accordion-header.open img {
+  transform: rotate(0deg);
+}
+.accordion-wrapper.secondary + .accordion-wrapper.secondary {
+  margin-top: 10px;
+}
+
+.accordion-wrapper.secondary .accordion-header .button {
+  position: absolute;
+  right: 41px;
+  top: 2px;
+  display: block;
+}

@@ -1,0 +1,23 @@
+.status,
+.role-status {
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: normal;
+}
+
+.role-status.leader {
+    color: #d0021b;
+}
+
+.role-status.director {
+    color: #eb8f2b;
+}
+
+.role-status.manager {
+    color: #39b620;
+}
+
+.status.active {
+    color: #0088f2;
+}

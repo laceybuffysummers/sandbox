@@ -1,0 +1,19 @@
+.radio-group-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.radio-group-wrapper .radio-group-container {
+  display: flex;
+}
+
+.radio-group-container label {
+  margin-right: 12px;
+  font-size: 12px;
+}
+
+.radio-group-wrapper span {
+  font-size: 12px;
+  color: red;
+  margin-top: 2px;
+}

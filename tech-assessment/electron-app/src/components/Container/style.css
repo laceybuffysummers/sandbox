@@ -1,0 +1,23 @@
+div.content {
+    width: calc(100vw - 254px - 254px);
+    height: calc(100vh - 41px - 92px);  
+    background-color: #f9f9f9;
+    overflow: auto;
+}
+div.content .inner {
+    min-width: 932px;
+}
+div.main-content {
+    height: calc(100vh - 41px - 92px);
+    width: 100%;
+    display: flex;
+}
+
+div.flex-content {
+    display: flex;
+}
+
+div.gutter-content {
+    padding-left: 25px;
+    padding-right: 25px;
+}

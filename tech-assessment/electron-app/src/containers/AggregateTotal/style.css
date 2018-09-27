@@ -1,0 +1,125 @@
+.no-data {
+  color: #4a4a4a;
+  padding: 40px;
+}
+.blue-bg {
+    background-color: #f9f9f9;
+    height: calc(100vh - 92px - 41px);
+    width: calc(100% - 254px);
+    overflow: auto;
+    padding-bottom: 20px;
+}
+.blue-bg .charts {
+    justify-content: space-between;
+    padding: 30px 25px 0 25px;
+    display: flex;
+}
+.button-wrapper {
+    justify-content: flex-end;
+    padding: 15px 20px 0 20px;
+    display: flex;
+}
+.button-wrapper .button {
+    padding: 0 20px;
+}
+.blue-bg .charts h4 {
+    margin: 0;
+    padding: 0 0 45px 0;
+    font-size: 14px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #4a4a4a;
+    display: flex;
+    justify-content: space-between;
+}
+.blue-bg .charts h4 p {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #4a4a4a;
+}
+
+.blue-bg .charts h4 p strong {
+    font-weight: bold;
+}
+
+.blue-bg .charts .chart-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.blue-bg .charts .chart-container.center {
+    justify-content: center;
+    height: 220px;
+}
+
+/* filter-section */
+.blue-bg .filter-section {
+    display: flex;
+    align-items: flex-end;
+    padding: 13px 22px 22px 22px;
+    width: 100%;
+    height: 109px;
+    background-color: #ffffff;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.07);
+}
+
+.blue-bg .filter-section .form-label-wrapper {
+    padding-bottom: 10px;
+}
+
+.blue-bg .filter-section .select-wrapper,
+.blue-bg .filter-section .form-select {
+    height: 40px;
+}
+.blue-bg .filter-section .button {
+    height: 40px;
+    line-height: 38px;
+}
+
+/* legend */
+.blue-bg .chart-legend {
+    display: flex;
+    font-size: 12px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #4a4a4a;
+}
+.blue-bg .chart-legend div {
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+}
+.blue-bg .chart-legend div i {
+    width: 8px;
+    height: 8px;
+    background-color: #eb8f2b;
+    display: block;
+    margin-right: 5px;
+}
+.blue-bg .chart-legend div i.blue {
+    background-color: #007bc1;
+}
+.blue-bg .chart-legend div i.green {
+    background-color: #87c346;
+}
+.blue-bg .chart-legend div i.purple {
+    background-color: #925fbe;
+}
+
+.statistics-error-msg {
+    color: #ff0000;
+    text-align: center;
+    padding: 10px;
+}
