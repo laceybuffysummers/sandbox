@@ -14,7 +14,8 @@
       "consistent-return": 0,
       "max-len": [2, 200],
       "camelcase": 0,
-      "import/no-dynamic-require": 0
+      "import/no-dynamic-require": 0,
+      "linebreak-style": ["error", "windows"]
   },
   "parserOptions": {
     "ecmaVersion": 6
